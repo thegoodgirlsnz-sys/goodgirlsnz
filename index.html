@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Good Girls | West Auckland's First Private Luxury Massage Studio</title>
+  <meta name="description" content="Good Girls — a private, luxurious and sensual massage experience in West Auckland. Unhurried, intentional and beautifully presented. Book by appointment." />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Good Girls | West Auckland's First Private Luxury Massage Studio" />
+  <meta property="og:description" content="Good Girls — a private, luxurious and sensual massage experience in West Auckland. Unhurried, intentional and beautifully presented." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://goodgirlsnz.com/" />
+  <meta property="og:image" content="images/logo.jpg" />
+
+  <!-- Favicon / Icons -->
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="images/logo.jpg" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Good Girls",
+    "description": "Private luxury massage studio in West Auckland offering sensual, sophisticated experiences.",
+    "image": "https://goodgirls.co.nz/images/logo.jpg",
+    "telephone": "+6421884475",
+    "email": "thegoodgirlsnz@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Auckland",
+      "addressRegion": "Auckland",
+      "addressCountry": "NZ"
+    },
+    "priceRange": "$$",
+    "openingHours": "By appointment only",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-36.8485",
+      "longitude": "174.7633"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --dark: #0a0e1a;
+      --dark-alt: #141824;
+      --gold: #c9a84c;
+      --gold-light: #d4b85c;
+      --pink: #d4a5a5;
+      --white: #ffffff;
+      --off-white: #f8f7f5;
+      --text-light: #e8e8e8;
+      --text-muted: #9a9a9a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text-light);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: var(--white);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    /* ---------- HEADER ---------- */
+    .site-header {
+      padding: 16px 0;
+      background: rgba(10, 14, 26, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--white);
+      font-style: italic;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+    }
+
+    .brand span { color: var(--gold); }
+
+    .main-nav {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      position: relative;
+    }
+
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+
+    .main-nav a:hover::after { width: 100%; }
+    .main-nav a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: transparent;
+      color: var(--gold) !important;
+      padding: 10px 28px;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--dark) !important;
+    }
+
+    .burger {
+      display: none;
+      background: none;
+      border: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .burger span {
+      width: 25px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 120px 20px 80px;
+      overflow: hidden;
+    }
+
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.4) contrast(1.1) saturate(0.9);
+    }
+
+    .hero-background::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at top, rgba(10, 14, 26, 0.7) 0%, transparent 60%),
+        radial-gradient(ellipse at bottom, rgba(10, 14, 26, 0.8) 0%, transparent 60%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
+
+    .hero-title {
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    .hero-title em {
+      color: var(--gold);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      margin-bottom: 48px;
+      opacity: 0.8;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 40px;
+      border-radius: 2px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--dark);
+      border-color: var(--gold);
+    }
+
+    .btn-gold:hover {
+      background: transparent;
+      color: var(--gold);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.3);
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--dark);
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 40px auto;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    .section {
+      padding: 120px 0;
+      position: relative;
+    }
+
+    .section-dark { background: var(--dark-alt); }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 80px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .section-header h2 em { color: var(--gold); font-style: normal; }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* ---------- EXPERIENCE SECTION ---------- */
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .experience-card {
+      text-align: center;
+      padding: 40px 24px;
+      border: 1px solid rgba(201, 168, 76, 0.1);
+      border-radius: 4px;
+      transition: all 0.4s ease;
+      background: rgba(20, 24, 36, 0.3);
+    }
+
+    .experience-card:hover {
+      border-color: rgba(201, 168, 76, 0.3);
+      transform: translateY(-8px);
+      background: rgba(20, 24, 36, 0.5);
+    }
+
+    .experience-icon {
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .experience-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .experience-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* ---------- SERVICES PREVIEW ---------- */
+    .services-preview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .service-preview-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      aspect-ratio: 3/4;
+    }
+
+    .service-preview-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.85) contrast(1.1) blur(2px);
+      transition: transform 0.6s ease, filter 0.6s ease;
+    }
+
+    .service-preview-image:hover img {
+      transform: scale(1.05);
+      filter: brightness(0.95) contrast(1.1) blur(1px);
+    }
+
+    .service-preview-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.1) 0%, transparent 60%);
+    }
+
+    .service-preview-content h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .service-preview-content p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    .service-meta {
+      display: flex;
+      gap: 32px;
+      margin: 32px 0;
+      padding: 24px 0;
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+      flex-wrap: wrap;
+    }
+
+    .service-meta-item span {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+
+    .service-meta-item strong {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    /* ---------- ABOUT PREVIEW ---------- */
+    .about-preview {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-preview p {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: var(--text-light);
+      margin-bottom: 24px;
+      font-weight: 300;
+    }
+
+    .about-preview p:first-of-type::first-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      float: left;
+      line-height: 0.8;
+      padding-right: 12px;
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    /* ---------- FAQ PREVIEW ---------- */
+    .faq-preview {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+      padding: 24px 0;
+      cursor: pointer;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.1rem;
+      color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+    }
+
+    .faq-question::after {
+      content: '+';
+      color: var(--gold);
+      font-size: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.active .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 400px;
+      padding-top: 16px;
+    }
+
+    /* ---------- BOOKING FORM SECTION ---------- */
+    .booking-form-section {
+      padding: 100px 0;
+      background: var(--dark-alt);
+    }
+
+    .booking-form-section .section-header {
+      margin-bottom: 60px;
+    }
+
+    .booking-form-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(20, 24, 36, 0.4);
+      padding: 56px 48px;
+      border-radius: 4px;
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .booking-form-wrapper h2 {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      text-align: center;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+
+    .booking-form-wrapper h2 em { color: var(--gold); font-style: normal; }
+
+    .booking-form-wrapper .sub {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      font-size: 1.05rem;
+    }
+
+    .form-group {
+      margin-bottom: 28px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 10px;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 16px 20px;
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      border-radius: 2px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s;
+      background: rgba(10, 14, 26, 0.5);
+      color: var(--text-light);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: rgba(10, 14, 26, 0.8);
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    .btn-block {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* ---------- POPUP ---------- */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 8, 16, 0.85);
+      backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    .popup-overlay.active { display: flex; }
+
+    .popup-card {
+      background: var(--dark-alt);
+      padding: 60px 50px;
+      border-radius: 4px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+      animation: popFade 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      position: relative;
+    }
+
+    .popup-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at top, rgba(201, 168, 76, 0.08) 0%, transparent 60%);
+      border-radius: 4px;
+    }
+
+    .popup-card-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes popFade {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .popup-icon {
+      width: 90px;
+      height: 90px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+      font-size: 3rem;
+      color: var(--dark);
+      box-shadow: 0 10px 40px rgba(201, 168, 76, 0.3);
+    }
+
+    .popup-card h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: var(--white);
+      font-style: italic;
+    }
+
+    .popup-card h2 em { color: var(--gold); font-style: normal; }
+
+    .popup-card p {
+      color: var(--text-light);
+      margin-bottom: 36px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .popup-card .btn {
+      background: var(--gold);
+      color: var(--dark);
+      border: 1px solid var(--gold);
+    }
+
+    .popup-card .btn:hover {
+      background: transparent;
+      color: var(--gold);
+    }
+
+    /* ---------- CTA BAND ---------- */
+    .cta-band {
+      padding: 100px 0;
+      text-align: center;
+      background:
+        linear-gradient(135deg, rgba(10, 14, 26, 0.95) 0%, rgba(20, 24, 36, 0.95) 100%),
+        radial-gradient(ellipse at center, rgba(201, 168, 76, 0.1) 0%, transparent 70%);
+    }
+
+    .cta-band h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .cta-band p {
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      background: #050810;
+      color: var(--text-muted);
+      padding: 80px 0 32px;
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--white);
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand span { color: var(--gold); }
+
+    .footer-tag {
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .footer-desc {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .footer-col a,
+    .footer-col span {
+      display: block;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    .footer-col a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 992px) {
+      .experience-grid { grid-template-columns: 1fr; gap: 24px; }
+      .services-preview { grid-template-columns: 1fr; gap: 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .booking-form-wrapper { padding: 40px 28px; }
+    }
+
+    @media (max-width: 768px) {
+      .main-nav { display: none; }
+      .burger { display: flex; }
+      .section { padding: 80px 0; }
+      .section-header { margin-bottom: 50px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .service-meta { flex-direction: column; gap: 16px; }
+      .booking-form-wrapper { padding: 32px 20px; }
+      .hero-title { font-size: clamp(2.5rem, 10vw, 4rem); }
+    }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 14, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 200;
+      padding: 100px 40px;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .mobile-nav.active { display: flex; }
+
+    .mobile-nav a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-style: italic;
+      color: var(--white);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+      padding-bottom: 16px;
+    }
+
+    .mobile-nav a:hover { color: var(--gold); }
+
+    .mobile-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background: none;
+      border: none;
+      color: var(--gold);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpg" alt="Good Girls" class="brand-logo" />
+      Good <span>Girls</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="meet-the-girls.html">Meet the Girls</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact</a>
+      <a href="#booking" class="nav-cta">Book Now</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">×</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="meet-the-girls.html">Meet the Girls</a>
+  <a href="faqs.html">FAQs</a>
+  <a href="contact.html">Contact</a>
+  <a href="#booking">Book Now</a>
+</div>
+
+<main>
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero-background">
+      <img src="images/bg2.png" alt="Good Girls Luxury Massage Studio" />
+    </div>
+    <div class="hero-content">
+      <p class="eyebrow">West Auckland's First Private Luxury Massage Studio</p>
+      <h1 class="hero-title">Slow down. <em>Switch off.</em><br/>Feel everything.</h1>
+      <p class="hero-sub">A private, intentional and beautifully presented sensual experience crafted for those who appreciate the art of unhurried touch.</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-gold">Book Your Experience</a>
+        <a href="#services" class="btn btn-outline">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== THE GOOD GIRLS EXPERIENCE ========== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">The Experience</p>
+        <h2>A different kind of <em>intimacy</em></h2>
+        <p>Every Good Girls experience is intentional, discreet and designed to leave you feeling completely present.</p>
+      </div>
+
+      <div class="experience-grid">
+        <div class="experience-card">
+          <div class="experience-icon">✦</div>
+          <h3>Sophisticated</h3>
+          <p>Elegant spaces, refined details, and a level of care that elevates every moment of your visit.</p>
+        </div>
+        <div class="experience-card">
+          <div class="experience-icon">◈</div>
+          <h3>Discreet</h3>
+          <p>Your privacy is sacred. From the moment you arrive to the moment you leave, everything is confidential.</p>
+        </div>
+        <div class="experience-card">
+          <div class="experience-icon">❀</div>
+          <h3>Intentional</h3>
+          <p>Nothing is rushed. Every touch, every pause, every breath is part of a carefully considered experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES PREVIEW ========== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Services</p>
+        <h2>Curated <em>experiences</em></h2>
+        <p>Two signature journeys, each crafted to awaken a different dimension of pleasure and presence.</p>
+      </div>
+
+      <!-- Service 1: Signature Experience -->
+      <div class="services-preview" style="margin-bottom: 100px;">
+        <div class="service-preview-image">
+          <img src="images/03.jpg" alt="The Signature Experience" />
+        </div>
+        <div class="service-preview-content">
+          <p class="eyebrow">Signature</p>
+          <h3>The Signature Experience</h3>
+          <p>An unhurried journey into deep relaxation and sensual awakening. Warm oils, intuitive touch, and a pace that allows you to fully surrender to the moment.</p>
+          <p>This is the heart of Good Girls — a beautifully considered experience designed to help you feel desired, present, and completely at ease.</p>
+
+          <div class="service-meta">
+            <div class="service-meta-item">
+              <span>Duration</span>
+              <strong>30 · 60 · 90 · 120 min</strong>
+            </div>
+            <div class="service-meta-item">
+              <span>Investment</span>
+              <strong>$140 · $190 · $290 · $380</strong>
+            </div>
+          </div>
+
+          <a href="#booking" class="btn btn-gold">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Service 2: Training Doubles -->
+      <div class="services-preview">
+        <div class="service-preview-content">
+          <p class="eyebrow">Exclusive</p>
+          <h3>Training Doubles</h3>
+          <p>Two attentive hands, two distinct energies. A rare opportunity to experience the art of sensual touch from both a seasoned practitioner and a rising talent.</p>
+          <p>Guided by our lead, this immersive session is a masterclass in presence, connection, and the pleasure of being truly seen.</p>
+
+          <div class="service-meta">
+            <div class="service-meta-item">
+              <span>Duration</span>
+              <strong>60 · 90 · 120 min</strong>
+            </div>
+            <div class="service-meta-item">
+              <span>Investment</span>
+              <strong>$420 · $600 · $780</strong>
+            </div>
+          </div>
+
+          <a href="#booking" class="btn btn-gold">Book Now</a>
+        </div>
+        <div class="service-preview-image">
+          <img src="images/04.jpg" alt="Training Doubles" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT PREVIEW ========== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">About Good Girls</p>
+        <h2>More than <em>a massage</em></h2>
+      </div>
+
+      <div class="about-preview">
+        <p>Good Girls was created to offer a private and luxurious space where you can slow down, switch off and experience the art of sensual touch.</p>
+        <p>Welcoming both men and women, our experiences are centred around relaxation, connection, anticipation, sensuality and pleasure — all within a warm, respectful and discreet environment.</p>
+        <p>Every Good Girls experience is intentional and unhurried, with a focus on helping you feel comfortable, desired and completely present in the moment.</p>
+        <p>We believe sensuality can be sophisticated, playful and beautifully presented. Good Girls brings together feminine energy, intuitive touch and exceptional hospitality to create an experience that feels completely different from an ordinary massage.</p>
+        <div class="divider"></div>
+        <a href="about.html" class="btn btn-outline">Our Full Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BOOKING FORM SECTION ========== -->
+  <section class="booking-form-section" id="booking">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Book Your Experience</p>
+        <h2>Let's create something <em>beautiful</em></h2>
+        <p>Fill in the details below and we'll get back to you to confirm your booking.</p>
+      </div>
+
+      <div class="booking-form-wrapper">
+        <h2>Complete Your <em>Booking</em></h2>
+        <p class="sub">Select a service and share your preferences.</p>
+
+        <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="5593f94d-2b91-4bfc-a185-f911f86908a5" />
+          <input type="hidden" name="redirect" value="#" />
+
+          <div class="form-group">
+            <label for="serviceSelect">Select Service *</label>
+            <select id="serviceSelect" name="service" required>
+              <option value="">— Please choose —</option>
+              <option value="The Signature Experience ($140 – $380)">The Signature Experience</option>
+              <option value="Training Doubles ($420 – $780)">Training Doubles</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="name" required placeholder="Your full name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+64 21 884 475" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Preferred date/time, special requests, or any additional details..."></textarea>
+            <p class="form-note">💡 The selected service will be automatically added to your message. You can add more details above.</p>
+          </div>
+
+          <!-- Honeypot spam protection -->
+          <input type="checkbox" name="botcheck" style="display: none;" />
+
+          <button type="submit" class="btn btn-gold btn-block">Submit Booking Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ PREVIEW ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Etiquette & Boundaries</p>
+        <h2>Things worth <em>knowing</em></h2>
+        <p>Clear expectations, respectful boundaries, and a commitment to your comfort.</p>
+      </div>
+
+      <div class="faq-preview">
+        <div class="faq-item">
+          <div class="faq-question">What should I expect during my first visit?</div>
+          <div class="faq-answer">
+            <p>From the moment you arrive, you'll be welcomed into a private, beautifully prepared space. Your session begins with a gentle introduction, allowing you to settle in and share any preferences. From there, the experience unfolds at a pace that feels right for you.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is Good Girls welcoming to all genders?</div>
+          <div class="faq-answer">
+            <p>Absolutely. Good Girls is an inclusive space, welcoming both men and women who seek a sophisticated, sensual, and respectful experience.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What are the boundaries?</div>
+          <div class="faq-answer">
+            <p>Our experiences are sensual, not sexual. Respect, consent, and discretion are at the heart of everything we do. Any behaviour that crosses these boundaries will result in the immediate termination of the session without refund.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How do I prepare for my session?</div>
+          <div class="faq-answer">
+            <p>Simply arrive as you are. We provide everything you need — towels, warm oils, and refreshments. We ask only that you arrive on time to allow yourself to settle into the experience.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How do payments work?</div>
+          <div class="faq-answer">
+            <p>Payment is required before your session to secure your booking. We accept cash (NZD) and credit/debit cards. All prices include GST where applicable, and receipts are available upon request.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 60px;">
+        <a href="faqs.html" class="btn btn-outline">Read All FAQs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BAND ========== -->
+  <section class="cta-band">
+    <div class="container">
+      <p class="eyebrow">By Appointment Only</p>
+      <h2>Ready to experience <em style="color: var(--gold);">Good Girls</em>?</h2>
+      <p>West Auckland's first private luxury massage studio awaits. Every session is private, unhurried, and entirely yours.</p>
+      <a href="#booking" class="btn btn-gold">Book Your Experience</a>
+    </div>
+  </section>
+</main>
+
+<!-- ========== CONFIRMATION POPUP ========== -->
+<div class="popup-overlay" id="confirmationPopup">
+  <div class="popup-card">
+    <div class="popup-card-content">
+      <div class="popup-icon">✓</div>
+      <h2>Thank <em>You</em></h2>
+      <p>Your booking request has been received. We'll get back to you shortly to confirm your session.</p>
+      <a href="index.html" class="btn btn-gold" id="popupHomeBtn">Back to Home</a>
+    </div>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Good <span>Girls</span></div>
+        <p class="footer-tag">Private. Intentional. Beautifully presented.</p>
+        <p class="footer-desc">West Auckland's first private luxury massage studio. Sensual, sophisticated, and discreet.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="meet-the-girls.html">Meet the Girls</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Information</h4>
+        <a href="faqs.html">FAQs</a>
+        <a href="faqs.html#etiquette">Etiquette & Boundaries</a>
+        <a href="contact.html">Contact</a>
+        <a href="#booking">Book Now</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+6421884475">+64 21 884 475</a>
+        <a href="mailto:thegoodgirlsnz@gmail.com">thegoodgirlsnz@gmail.com</a>
+        <span>West Auckland, NZ</span>
+        <span style="font-size: 0.8rem; margin-top: 8px; opacity: 0.7;">Address shared privately upon booking</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Good Girls. All rights reserved.</span>
+      <span>Private · Discreet · By Appointment</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // ---- MOBILE MENU ----
+    const burger = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileClose = document.getElementById('mobileClose');
+
+    if (burger && mobileNav && mobileClose) {
+      burger.addEventListener('click', function() {
+        mobileNav.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+      mobileClose.addEventListener('click', function() {
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+      mobileNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileNav.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // ---- FAQ ACCORDION ----
+    document.querySelectorAll('.faq-item').forEach(function(item) {
+      item.addEventListener('click', function() {
+        var wasActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(i) {
+          i.classList.remove('active');
+        });
+        if (!wasActive) item.classList.add('active');
+      });
+    });
+
+    // ---- SCROLL REVEAL ----
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.experience-card, .services-preview, .faq-item').forEach(function(el) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'all 0.8s ease';
+      revealObserver.observe(el);
+    });
+
+    // ---- BOOKING FORM ----
+    const form = document.getElementById('bookingForm');
+    const serviceSelect = document.getElementById('serviceSelect');
+    const messageField = document.getElementById('message');
+    const popup = document.getElementById('confirmationPopup');
+    const popupHomeBtn = document.getElementById('popupHomeBtn');
+
+    // Auto-fill message when service selected
+    serviceSelect.addEventListener('change', function() {
+      if (this.value) {
+        // Build default message with service info
+        var serviceText = this.value;
+        var defaultMsg = 'I would like to book: ' + serviceText + '\n\n' +
+                         'Preferred Date/Time: \n' +
+                         'Special Requests: \n\n' +
+                         'Additional Details: ';
+        messageField.value = defaultMsg;
+      } else {
+        messageField.value = '';
+      }
+    });
+
+    // Form submission via fetch (Web3Forms)
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        if (data.success) {
+          // Show popup
+          popup.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          form.reset();
+          messageField.value = '';
+          // Reset select
+          serviceSelect.selectedIndex = 0;
+          // Auto-close after 30 seconds
+          setTimeout(function() {
+            popup.classList.remove('active');
+            document.body.style.overflow = '';
+          }, 30000);
+        } else {
+          alert('Something went wrong. Please try again or contact us directly.');
+        }
+      })
+      .catch(function(error) {
+        console.error('Error:', error);
+        alert('Network error. Please check your connection and try again.');
+      });
+    });
+
+    // Close popup manually with button
+    if (popupHomeBtn) {
+      popupHomeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        popup.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+
+    // Close popup on overlay click
+    popup.addEventListener('click', function(e) {
+      if (e.target === this) {
+        popup.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+</script>
+</body>
+</html>

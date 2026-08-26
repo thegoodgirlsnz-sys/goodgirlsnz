@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Experience | Good Girls — West Auckland's First Private Luxury Massage Studio</title>
+  <meta name="description" content="Book your private luxury massage experience at Good Girls. West Auckland's first private sensual massage studio." />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Book Your Experience | Good Girls" />
+  <meta property="og:description" content="Book your private luxury massage experience at Good Girls." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://goodgirlsnz.com/booking.html" />
+  <meta property="og:image" content="images/logo.jpg" />
+
+  <!-- Favicon / Icons -->
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="images/logo.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --dark: #0a0e1a;
+      --dark-alt: #141824;
+      --gold: #c9a84c;
+      --gold-light: #d4b85c;
+      --pink: #d4a5a5;
+      --white: #ffffff;
+      --text-light: #e8e8e8;
+      --text-muted: #9a9a9a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text-light);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: var(--white);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    em { color: var(--gold); font-style: italic; }
+
+    /* ---------- HEADER ---------- */
+    .site-header {
+      padding: 16px 0;
+      background: rgba(10, 14, 26, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--white);
+      font-style: italic;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+    }
+
+    .brand span { color: var(--gold); }
+
+    .main-nav {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      position: relative;
+    }
+
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+
+    .main-nav a:hover::after { width: 100%; }
+    .main-nav a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: transparent;
+      color: var(--gold) !important;
+      padding: 10px 28px;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--dark) !important;
+    }
+
+    .burger {
+      display: none;
+      background: none;
+      border: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .burger span {
+      width: 25px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    /* ---------- HERO BACKGROUND ---------- */
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.4) contrast(1.1) saturate(0.9);
+    }
+
+    .hero-background::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at top, rgba(10, 14, 26, 0.7) 0%, transparent 60%),
+        radial-gradient(ellipse at bottom, rgba(10, 14, 26, 0.8) 0%, transparent 60%);
+    }
+
+    /* ---------- PAGE CONTENT ---------- */
+    .page-content {
+      padding: 80px 0 100px;
+    }
+
+    .service-header {
+      background: rgba(20, 24, 36, 0.4);
+      padding: 60px 48px;
+      border-radius: 4px;
+      margin-bottom: 60px;
+      text-align: center;
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      position: relative;
+    }
+
+    .service-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at top, rgba(201, 168, 76, 0.05) 0%, transparent 60%);
+      border-radius: 4px;
+    }
+
+    .service-header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-header h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .service-header h1 em { color: var(--gold); font-style: normal; }
+
+    .service-price {
+      font-size: 1.3rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      line-height: 1.6;
+    }
+
+    .service-description {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--text-light);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* ---------- BOOKING FORM ---------- */
+    .booking-section {
+      max-width: 700px;
+      margin: 0 auto 80px;
+    }
+
+    .booking-section h2 {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      text-align: center;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    .booking-section h2 em { color: var(--gold); font-style: normal; }
+
+    .booking-form {
+      background: rgba(20, 24, 36, 0.4);
+      padding: 56px 48px;
+      border-radius: 4px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      border: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    .form-group {
+      margin-bottom: 28px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 10px;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 16px 20px;
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      border-radius: 2px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s;
+      background: rgba(10, 14, 26, 0.5);
+      color: var(--text-light);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: rgba(10, 14, 26, 0.8);
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 44px;
+      border-radius: 2px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--dark);
+      border-color: var(--gold);
+    }
+
+    .btn-gold:hover {
+      background: transparent;
+      color: var(--gold);
+    }
+
+    .btn-block {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* ---------- INFO SECTIONS ---------- */
+    .info-section {
+      max-width: 900px;
+      margin: 0 auto 80px;
+      padding: 56px 48px;
+      background: rgba(20, 24, 36, 0.4);
+      border-radius: 4px;
+      border: 1px solid rgba(201, 168, 76, 0.1);
+    }
+
+    .info-section h2 {
+      font-size: clamp(1.8rem, 3vw, 2.2rem);
+      margin-bottom: 32px;
+      color: var(--white);
+      font-style: italic;
+    }
+
+    .info-section h2 em { color: var(--gold); font-style: normal; }
+
+    .info-section h3 {
+      font-size: 1.3rem;
+      margin: 36px 0 16px;
+      font-weight: 400;
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+    }
+
+    .info-section p,
+    .info-section li {
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-weight: 300;
+    }
+
+    .info-section ul {
+      margin-left: 24px;
+      margin-bottom: 20px;
+    }
+
+    .info-section li {
+      margin-bottom: 12px;
+    }
+
+    .payment-methods {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .payment-badge {
+      padding: 12px 24px;
+      background: rgba(201, 168, 76, 0.08);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      border-radius: 2px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    /* ---------- POPUP ---------- */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 8, 16, 0.85);
+      backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    .popup-overlay.active {
+      display: flex;
+    }
+
+    .popup-card {
+      background: var(--dark-alt);
+      padding: 60px 50px;
+      border-radius: 4px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+      animation: popFade 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      position: relative;
+    }
+
+    .popup-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at top, rgba(201, 168, 76, 0.08) 0%, transparent 60%);
+      border-radius: 4px;
+    }
+
+    .popup-card-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes popFade {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .popup-icon {
+      width: 90px;
+      height: 90px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+      font-size: 3rem;
+      color: var(--dark);
+      box-shadow: 0 10px 40px rgba(201, 168, 76, 0.3);
+    }
+
+    .popup-card h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: var(--white);
+      font-style: italic;
+    }
+
+    .popup-card h2 em { color: var(--gold); font-style: normal; }
+
+    .popup-card p {
+      color: var(--text-light);
+      margin-bottom: 36px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .popup-home-btn {
+      display: inline-block;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      background: #050810;
+      color: var(--text-muted);
+      padding: 80px 0 32px;
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--white);
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand span { color: var(--gold); }
+
+    .footer-tag {
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .footer-desc {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .footer-col a,
+    .footer-col span {
+      display: block;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    .footer-col a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ---------- MOBILE NAV ---------- */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 14, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 200;
+      padding: 100px 40px;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .mobile-nav.active { display: flex; }
+
+    .mobile-nav a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-style: italic;
+      color: var(--white);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+      padding-bottom: 16px;
+    }
+
+    .mobile-nav a:hover { color: var(--gold); }
+
+    .mobile-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background: none;
+      border: none;
+      color: var(--gold);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 992px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 768px) {
+      .main-nav { display: none; }
+      .burger { display: flex; }
+      .service-header { padding: 40px 24px; }
+      .booking-form { padding: 36px 28px; }
+      .info-section { padding: 36px 28px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+      }
+      .popup-card { padding: 40px 28px; }
+      .payment-methods {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .page-content { padding: 40px 0 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.jpg" alt="Good Girls" class="brand-logo" />
+        Good <span>Girls</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="meet-the-girls.html">Meet the Girls</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+        <a href="booking.html" class="nav-cta" style="color: var(--gold);">Book Now</a>
+      </nav>
+      <button class="burger" id="burgerBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" id="mobileClose">×</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="meet-the-girls.html">Meet the Girls</a>
+    <a href="faqs.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html">Book Now</a>
+  </div>
+
+  <main>
+    <!-- ========== PAGE CONTENT ========== -->
+    <section class="page-content">
+      <div class="container">
+
+        <!-- ===== SERVICE HEADER ===== -->
+        <div class="service-header">
+          <div class="service-header-content">
+            <p class="eyebrow" id="serviceEyebrow">Selected Experience</p>
+            <h1 id="serviceName">Loading Service...</h1>
+            <p class="service-price" id="servicePrice"></p>
+            <p class="service-description" id="serviceDescription"></p>
+          </div>
+        </div>
+
+        <!-- ===== BOOKING FORM ===== -->
+        <div class="booking-section">
+          <h2>Complete Your <em>Booking</em></h2>
+
+          <!-- Web3Forms Booking Form -->
+          <form class="booking-form" id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="5593f94d-2b91-4bfc-a185-f911f86908a5" />
+            <input type="hidden" name="redirect" value="#" />
+
+            <!-- Hidden service name for submission -->
+            <input type="hidden" name="selected_service" id="hiddenService" value="" />
+
+            <div class="form-group">
+              <label for="serviceSelect">Select Your Experience *</label>
+              <select id="serviceSelect" name="service" required>
+                <option value="">— Please choose —</option>
+                <option value="The Signature Experience ($140 – $380)">The Signature Experience</option>
+                <option value="Training Doubles ($420 – $780)">Training Doubles</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="name" required placeholder="Your full name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+64 21 884 475" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Preferred date/time, special requests, or any additional details..."></textarea>
+              <p class="form-note">💡 The selected service is automatically added to your message. You can add more details above.</p>
+            </div>
+
+            <!-- Honeypot spam protection -->
+            <input type="checkbox" name="botcheck" style="display: none;" />
+
+            <button type="submit" class="btn btn-gold btn-block">Submit Booking Request</button>
+          </form>
+        </div>
+
+        <!-- ===== POLICIES SECTION ===== -->
+        <div class="info-section">
+          <h2>Booking Policies & <em>Important Information</em></h2>
+
+          <h3>Booking & Cancellation Policy</h3>
+          <ul>
+            <li>All bookings are by appointment only and require advance notice.</li>
+            <li>Free rescheduling is available up to 12 hours before your scheduled appointment.</li>
+            <li>Cancellations made less than 12 hours before your appointment may incur a cancellation fee.</li>
+            <li>Please arrive on time for your scheduled session.</li>
+          </ul>
+
+          <h3>Service Conditions</h3>
+          <ul>
+            <li>All sessions are private and conducted in a professional, discreet environment.</li>
+            <li>Services are tailored to your preferences within the scope of the selected package.</li>
+            <li>Our masseuses maintain full professional boundaries at all times.</li>
+            <li>Any inappropriate behavior will result in immediate termination of the session without refund.</li>
+          </ul>
+
+          <h3>Extra Services & Additional Charges</h3>
+          <p>Extra services are additional offerings not featured in our standard sensual massage packages and may vary from one masseuse to another. We gladly embrace the opportunity to enhance your sensual massage with these extras.</p>
+          <ul>
+            <li>The fees for extras vary between masseuses and pricelists are available on request.</li>
+            <li>Services not listed as part of our sensual massage packages must only be performed with the explicit consent of the masseuse.</li>
+            <li>Any attempts to request or attain services not included in the massage package will result in the immediate termination of your massage session, without any refund.</li>
+          </ul>
+
+          <h3>Important Policy Notice</h3>
+          <p><strong>It's essential to clarify that sexual intercourse is not considered an extra nor is it a service we offer.</strong> Any attempts to pressure our masseuses into providing this service will result in the immediate termination of your booking without a refund.</p>
+        </div>
+
+        <!-- ===== PAYMENT INFORMATION ===== -->
+        <div class="info-section">
+          <h2>Payment <em>Information</em></h2>
+
+          <h3>When to Pay</h3>
+          <p>Payment is required before your session to secure your booking. We accept cash (NZD) and credit/debit cards. All prices include GST where applicable, and receipts are available upon request.</p>
+
+          <h3>Accepted Payment Methods</h3>
+          <p>We offer the following convenient payment options for our New Zealand customers:</p>
+          <div class="payment-methods">
+            <div class="payment-badge">💳 Credit/Debit Card</div>
+            <div class="payment-badge">💰 Cash (NZD)</div>
+          </div>
+
+          <h3>Payment Details</h3>
+          <ul>
+            <li><strong>Cash:</strong> New Zealand Dollars (NZD) accepted. Please ensure you have the exact amount.</li>
+            <li><strong>Credit/Debit Cards:</strong> We accept Visa, Mastercard, and other major cards. Secure card payment terminal available on-site.</li>
+          </ul>
+
+          <p style="margin-top: 24px;"><strong>Note:</strong> All prices are in New Zealand Dollars (NZD) and include GST where applicable. Receipts are available upon request.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== CONFIRMATION POPUP ========== -->
+  <div class="popup-overlay" id="confirmationPopup">
+    <div class="popup-card">
+      <div class="popup-card-content">
+        <div class="popup-icon">✓</div>
+        <h2>Thank <em>You</em></h2>
+        <p>Your booking request has been received. We'll get back to you shortly to confirm your session.</p>
+        <a href="index.html" class="btn btn-gold popup-home-btn">Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Good <span>Girls</span></div>
+          <p class="footer-tag">Private. Intentional. Beautifully presented.</p>
+          <p class="footer-desc">West Auckland's first private luxury massage studio. Sensual, sophisticated, and discreet.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="meet-the-girls.html">Meet the Girls</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Information</h4>
+          <a href="faqs.html">FAQs</a>
+          <a href="faqs.html#etiquette">Etiquette & Boundaries</a>
+          <a href="contact.html">Contact</a>
+          <a href="booking.html">Book Now</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+6421884475">+64 21 884 475</a>
+          <a href="mailto:thegoodgirlsnz@gmail.com">thegoodgirlsnz@gmail.com</a>
+          <span>West Auckland, NZ</span>
+          <span style="font-size: 0.8rem; margin-top: 8px; opacity: 0.7;">Address shared privately upon booking</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Good Girls. All rights reserved.</span>
+        <span>Private · Discreet · By Appointment</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // ---- MOBILE MENU ----
+      const burger = document.getElementById('burgerBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      const mobileClose = document.getElementById('mobileClose');
+
+      if (burger && mobileNav && mobileClose) {
+        burger.addEventListener('click', function() {
+          mobileNav.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+        mobileClose.addEventListener('click', function() {
+          mobileNav.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+        mobileNav.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = '';
+          });
+        });
+      }
+
+      // ---- SERVICE DATA (for dynamic header) ----
+      const services = {
+        signature: {
+          eyebrow: 'The Original',
+          name: 'The Signature Experience',
+          price: '30 Mins / $140 · 60 Mins / $190 · 90 Mins / $290 · 120 Mins / $380',
+          description: 'An unhurried journey into deep relaxation and sensual awakening. Warm oils, intuitive touch, and a pace that allows you to fully surrender to the moment. This is the heart of Good Girls — a beautifully considered experience designed to help you feel desired, present, and completely at ease.'
+        },
+        training: {
+          eyebrow: 'The Exclusive',
+          name: 'Training Doubles',
+          price: '60 Mins / $420 · 90 Mins / $600 · 120 Mins / $780',
+          description: 'Two attentive hands, two distinct energies. A rare opportunity to experience the art of sensual touch from both a seasoned practitioner and a rising talent. Guided by our lead, this immersive session is a masterclass in presence, connection, and the pleasure of being truly seen.'
+        }
+      };
+
+      // ---- GET SERVICE FROM URL (if any) ----
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceType = urlParams.get('service') || 'signature';
+      const service = services[serviceType] || services.signature;
+
+      // ---- DISPLAY SERVICE INFO IN HEADER ----
+      const eyebrowEl = document.getElementById('serviceEyebrow');
+      const nameEl = document.getElementById('serviceName');
+      const priceEl = document.getElementById('servicePrice');
+      const descEl = document.getElementById('serviceDescription');
+      const hiddenService = document.getElementById('hiddenService');
+
+      if (eyebrowEl) eyebrowEl.textContent = service.eyebrow;
+      if (nameEl) nameEl.innerHTML = service.name.replace('Experience', '<em>Experience</em>').replace('Doubles', '<em>Doubles</em>');
+      if (priceEl) priceEl.textContent = service.price;
+      if (descEl) descEl.textContent = service.description;
+      if (hiddenService) hiddenService.value = service.name;
+
+      // ---- SERVICE SELECT & MESSAGE AUTO-FILL ----
+      const serviceSelect = document.getElementById('serviceSelect');
+      const messageField = document.getElementById('message');
+
+      // If a service was preselected via URL, set it and trigger change
+      if (serviceType === 'signature') {
+        serviceSelect.value = 'The Signature Experience ($140 – $380)';
+      } else if (serviceType === 'training') {
+        serviceSelect.value = 'Training Doubles ($420 – $780)';
+      }
+
+      // Auto-fill message when service changes
+      serviceSelect.addEventListener('change', function() {
+        if (this.value) {
+          var serviceText = this.value;
+          var defaultMsg = 'I would like to book: ' + serviceText + '\n\n' +
+                           'Preferred Date/Time: \n' +
+                           'Special Requests: \n\n' +
+                           'Additional Details: ';
+          messageField.value = defaultMsg;
+        } else {
+          messageField.value = '';
+        }
+      });
+
+      // Trigger change on load if a service is pre-selected
+      if (serviceSelect.value) {
+        serviceSelect.dispatchEvent(new Event('change'));
+      }
+
+      // ---- FORM SUBMISSION (Web3Forms) ----
+      const form = document.getElementById('bookingForm');
+      const popup = document.getElementById('confirmationPopup');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var formData = new FormData(form);
+
+        fetch(form.action, {
+          method: 'POST',
+          body: formData
+        })
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+          if (data.success) {
+            // Show popup
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            form.reset();
+            messageField.value = '';
+            serviceSelect.selectedIndex = 0;
+
+            // Auto-close popup after 30 seconds
+            setTimeout(function() {
+              popup.classList.remove('active');
+              document.body.style.overflow = '';
+            }, 30000);
+          } else {
+            alert('Something went wrong. Please try again or contact us directly.');
+          }
+        })
+        .catch(function(error) {
+          console.error('Error:', error);
+          alert('Network error. Please check your connection and try again.');
+        });
+      });
+
+      // ---- CLOSE POPUP MANUALLY ----
+      var popupHomeBtn = document.querySelector('.popup-home-btn');
+      if (popupHomeBtn) {
+        popupHomeBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          popup.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      }
+
+      // Close on overlay click
+      popup.addEventListener('click', function(e) {
+        if (e.target === this) {
+          popup.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>

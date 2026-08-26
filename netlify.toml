@@ -1,0 +1,73 @@
+# ============================================
+# Netlify Configuration for Good Girls
+# ============================================
+
+[build]
+  publish = "."
+
+# Redirects and Rewrites
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/section.html"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/meet-the-girls.html"
+  to = "/meet-the-girls"
+  status = 301
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/faqs.html"
+  to = "/faqs"
+  status = 301
+
+[[redirects]]
+  from = "/booking.html"
+  to = "/booking"
+  status = 301
+
+# SPA fallback for 404 (if you ever use client-side routing)
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, immutable"

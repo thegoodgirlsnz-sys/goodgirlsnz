@@ -1,0 +1,104 @@
+
+---
+
+## 🚀 Technologies Used
+
+- HTML5
+- CSS3 (Custom, with CSS Variables & Flexbox/Grid)
+- Vanilla JavaScript
+- Web3Forms (booking form integration)
+- Formspree (contact form integration)
+- Google Fonts (Cormorant Garamond & Inter)
+- Schema.org JSON-LD Markup
+
+---
+
+## 🌐 Pages Overview
+
+| Page | Description |
+|------|-------------|
+| `index.html` | Homepage — hero, services preview, about preview, FAQ preview, booking form |
+| `about.html` | About Good Girls — story, values, and philosophy |
+| `services.html` | Full service listing with pricing and descriptions |
+| `meet-the-girls.html` | Single profile page for Missy (Founder & Practitioner) |
+| `faqs.html` | Frequently Asked Questions + Etiquette & Boundaries |
+| `contact.html` | Contact form + location/contact details |
+| `booking.html` | Booking form with service selection and auto-populated message |
+| `service-detail.html` | Individual service detail with booking integration |
+
+---
+
+## 🎨 Design System
+
+- **Primary Colors:** Dark (#0a0e1a), Gold (#c9a84c), White (#ffffff)
+- **Accent:** Pink (#d4a5a5) for highlights
+- **Fonts:** Cormorant Garamond (serif) + Inter (sans-serif)
+- **Style:** Sophisticated, sensual, intentional, and discreet
+
+---
+
+## 🔧 Environment Setup
+
+### For local development:
+1. Clone or download the project files.
+2. Open `index.html` in any modern browser.
+3. For best results, serve via a local server (e.g., Live Server in VS Code).
+
+### For production (Netlify):
+1. Push the project to a Git repository.
+2. Connect the repository to Netlify.
+3. Set the publish directory to the root folder (`.`).
+4. The `netlify.toml` file handles redirects, headers, and build settings automatically.
+
+---
+
+## 📧 Forms
+
+- **Booking Form:** Uses Web3Forms API
+  - Access Key: `5593f94d-2b91-4bfc-a185-f911f86908a5`
+- **Contact Form:** Uses Formspree
+  - Endpoint: `https://formspree.io/f/xwledlbo`
+
+> ⚠️ **Replace the API keys and endpoints with your own before deploying to production.**
+
+---
+
+## 🛡️ Security & Performance
+
+- HTTPS enforced via `.htaccess` (uncomment in production)
+- Gzip compression enabled
+- Browser caching set for static assets
+- CSRF protection via Formspree/Web3Forms
+- No sensitive data is stored on the server
+
+---
+
+## 📈 SEO & Metadata
+
+- Open Graph tags for social sharing
+- Schema.org JSON-LD markup for LocalBusiness
+- Clean URL structure via `.htaccess` and `netlify.toml`
+- `robots.txt` and `sitemap.xml` properly configured
+- All pages have unique `<title>` and `<meta description>`
+
+---
+
+## 📞 Contact
+
+For any questions or custom development needs:
+
+- **Email:** thegoodgirlsnz@gmail.com
+- **Phone:** +64 21 884 475
+- **Website:** https://goodgirlsnz.com
+
+---
+
+## 📝 License
+
+© 2026 Good Girls. All rights reserved.
+
+This project is proprietary and confidential. Unauthorised copying, distribution, or use of this code is strictly prohibited.
+
+---
+
+**Made with intention.**
