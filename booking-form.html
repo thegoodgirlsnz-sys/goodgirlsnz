@@ -623,219 +623,217 @@
   </style>
 </head>
 <body>
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpg" alt="Good Girls" class="brand-logo" />
+      Good <span>Girls</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="meet-the-girls.html">Meet the Girls</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html" class="nav-cta" style="color: var(--gold);">Book Now</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-  <!-- ========== HEADER ========== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <img src="images/logo.jpg" alt="Good Girls" class="brand-logo" />
-        Good <span>Girls</span>
-      </a>
-      <nav class="main-nav">
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">×</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="meet-the-girls.html">Meet the Girls</a>
+  <a href="faqs.html">FAQs</a>
+  <a href="contact.html">Contact</a>
+  <a href="booking.html">Book Now</a>
+</div>
+
+<main>
+  <!-- ========== PAGE CONTENT ========== -->
+  <section class="page-content">
+    <div class="container">
+
+      <!-- ===== SERVICE HEADER ===== -->
+      <div class="service-header">
+        <div class="service-header-content">
+          <p class="eyebrow" id="serviceEyebrow">Selected Experience</p>
+          <h1 id="serviceName">Loading Service...</h1>
+          <p class="service-price" id="servicePrice"></p>
+          <p class="service-description" id="serviceDescription"></p>
+        </div>
+      </div>
+
+      <!-- ===== BOOKING FORM ===== -->
+      <div class="booking-section">
+        <h2>Complete Your <em>Booking</em></h2>
+
+        <!-- Web3Forms Booking Form -->
+        <form class="booking-form" id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="5593f94d-2b91-4bfc-a185-f911f86908a5" />
+          <input type="hidden" name="redirect" value="#" />
+
+          <!-- Hidden service name for submission -->
+          <input type="hidden" name="selected_service" id="hiddenService" value="" />
+
+          <div class="form-group">
+            <label for="serviceSelect">Select Your Experience *</label>
+            <select id="serviceSelect" name="service" required>
+              <option value="">— Please choose —</option>
+              <option value="The Signature Experience ($140 – $380)">The Signature Experience</option>
+              <option value="Training Doubles ($420 – $780)">Training Doubles</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="name" required placeholder="Your full name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+64 21 884 475" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Preferred date/time, special requests, or any additional details..."></textarea>
+            <p class="form-note">💡 The selected service is automatically added to your message. You can add more details above.</p>
+          </div>
+
+          <!-- Honeypot spam protection -->
+          <input type="checkbox" name="botcheck" style="display: none;" />
+
+          <button type="submit" class="btn btn-gold btn-block">Submit Booking Request</button>
+        </form>
+      </div>
+
+      <!-- ===== POLICIES SECTION ===== -->
+      <div class="info-section">
+        <h2>Booking Policies & <em>Important Information</em></h2>
+
+        <h3>Booking & Cancellation Policy</h3>
+        <ul>
+          <li>All bookings are by appointment only and require advance notice.</li>
+          <li>Free rescheduling is available up to 12 hours before your scheduled appointment.</li>
+          <li>Cancellations made less than 12 hours before your appointment may incur a cancellation fee.</li>
+          <li>Please arrive on time for your scheduled session.</li>
+        </ul>
+
+        <h3>Service Conditions</h3>
+        <ul>
+          <li>All sessions are private and conducted in a professional, discreet environment.</li>
+          <li>Services are tailored to your preferences within the scope of the selected package.</li>
+          <li>Our masseuses maintain full professional boundaries at all times.</li>
+          <li>Any inappropriate behavior will result in immediate termination of the session without refund.</li>
+        </ul>
+
+        <h3>Extra Services & Additional Charges</h3>
+        <p>Extra services are additional offerings not featured in our standard sensual massage packages and may vary from one masseuse to another. We gladly embrace the opportunity to enhance your sensual massage with these extras.</p>
+        <ul>
+          <li>The fees for extras vary between masseuses and pricelists are available on request.</li>
+          <li>Services not listed as part of our sensual massage packages must only be performed with the explicit consent of the masseuse.</li>
+          <li>Any attempts to request or attain services not included in the massage package will result in the immediate termination of your massage session, without any refund.</li>
+        </ul>
+
+        <h3>Important Policy Notice</h3>
+        <p><strong>It's essential to clarify that sexual intercourse is not considered an extra nor is it a service we offer.</strong> Any attempts to pressure our masseuses into providing this service will result in the immediate termination of your booking without a refund.</p>
+      </div>
+
+      <!-- ===== PAYMENT INFORMATION ===== -->
+      <div class="info-section">
+        <h2>Payment <em>Information</em></h2>
+
+        <h3>When to Pay</h3>
+        <p>Payment is required before your session to secure your booking. We accept cash (NZD) and credit/debit cards. All prices include GST where applicable, and receipts are available upon request.</p>
+
+        <h3>Accepted Payment Methods</h3>
+        <p>We offer the following convenient payment options for our New Zealand customers:</p>
+        <div class="payment-methods">
+          <div class="payment-badge">💳 Credit/Debit Card</div>
+          <div class="payment-badge">💰 Cash (NZD)</div>
+        </div>
+
+        <h3>Payment Details</h3>
+        <ul>
+          <li><strong>Cash:</strong> New Zealand Dollars (NZD) accepted. Please ensure you have the exact amount.</li>
+          <li><strong>Credit/Debit Cards:</strong> We accept Visa, Mastercard, and other major cards. Secure card payment terminal available on-site.</li>
+        </ul>
+
+        <p style="margin-top: 24px;"><strong>Note:</strong> All prices are in New Zealand Dollars (NZD) and include GST where applicable. Receipts are available upon request.</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- ========== CONFIRMATION POPUP ========== -->
+<div class="popup-overlay" id="confirmationPopup">
+  <div class="popup-card">
+    <div class="popup-card-content">
+      <div class="popup-icon">✓</div>
+      <h2>Thank <em>You</em></h2>
+      <p>Your booking request has been received. We'll get back to you shortly to confirm your session.</p>
+      <a href="index.html" class="btn btn-gold popup-home-btn">Back to Home</a>
+    </div>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Good <span>Girls</span></div>
+        <p class="footer-tag">Private. Intentional. Beautifully presented.</p>
+        <p class="footer-desc">Private sensual massage in West Auckland. Sensual, sophisticated, and discreet.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="meet-the-girls.html">Meet the Girls</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Information</h4>
         <a href="faqs.html">FAQs</a>
+        <a href="faqs.html#etiquette">Etiquette & Boundaries</a>
         <a href="contact.html">Contact</a>
-        <a href="booking.html" class="nav-cta" style="color: var(--gold);">Book Now</a>
-      </nav>
-      <button class="burger" id="burgerBtn" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+        <a href="booking.html">Book Now</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+6421884475">+64 21 884 475</a>
+        <a href="mailto:thegoodgirlsnz@gmail.com">thegoodgirlsnz@gmail.com</a>
+        <span>West Auckland, NZ</span>
+        <span style="font-size: 0.8rem; margin-top: 8px; opacity: 0.7;">Address shared privately upon booking</span>
+      </div>
     </div>
-  </header>
 
-  <!-- Mobile Nav -->
-  <div class="mobile-nav" id="mobileNav">
-    <button class="mobile-close" id="mobileClose">×</button>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="meet-the-girls.html">Meet the Girls</a>
-    <a href="faqs.html">FAQs</a>
-    <a href="contact.html">Contact</a>
-    <a href="booking.html">Book Now</a>
-  </div>
-
-  <main>
-    <!-- ========== PAGE CONTENT ========== -->
-    <section class="page-content">
-      <div class="container">
-
-        <!-- ===== SERVICE HEADER ===== -->
-        <div class="service-header">
-          <div class="service-header-content">
-            <p class="eyebrow" id="serviceEyebrow">Selected Experience</p>
-            <h1 id="serviceName">Loading Service...</h1>
-            <p class="service-price" id="servicePrice"></p>
-            <p class="service-description" id="serviceDescription"></p>
-          </div>
-        </div>
-
-        <!-- ===== BOOKING FORM ===== -->
-        <div class="booking-section">
-          <h2>Complete Your <em>Booking</em></h2>
-
-          <!-- Web3Forms Booking Form -->
-          <form class="booking-form" id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
-            <!-- Web3Forms Access Key -->
-            <input type="hidden" name="access_key" value="5593f94d-2b91-4bfc-a185-f911f86908a5" />
-            <input type="hidden" name="redirect" value="#" />
-
-            <!-- Hidden service name for submission -->
-            <input type="hidden" name="selected_service" id="hiddenService" value="" />
-
-            <div class="form-group">
-              <label for="serviceSelect">Select Your Experience *</label>
-              <select id="serviceSelect" name="service" required>
-                <option value="">— Please choose —</option>
-                <option value="The Signature Experience ($140 – $380)">The Signature Experience</option>
-                <option value="Training Doubles ($420 – $780)">Training Doubles</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="fullName">Full Name *</label>
-              <input type="text" id="fullName" name="name" required placeholder="Your full name" />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" name="phone" required placeholder="+64 21 884 475" />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" name="message" placeholder="Preferred date/time, special requests, or any additional details..."></textarea>
-              <p class="form-note">💡 The selected service is automatically added to your message. You can add more details above.</p>
-            </div>
-
-            <!-- Honeypot spam protection -->
-            <input type="checkbox" name="botcheck" style="display: none;" />
-
-            <button type="submit" class="btn btn-gold btn-block">Submit Booking Request</button>
-          </form>
-        </div>
-
-        <!-- ===== POLICIES SECTION ===== -->
-        <div class="info-section">
-          <h2>Booking Policies & <em>Important Information</em></h2>
-
-          <h3>Booking & Cancellation Policy</h3>
-          <ul>
-            <li>All bookings are by appointment only and require advance notice.</li>
-            <li>Free rescheduling is available up to 12 hours before your scheduled appointment.</li>
-            <li>Cancellations made less than 12 hours before your appointment may incur a cancellation fee.</li>
-            <li>Please arrive on time for your scheduled session.</li>
-          </ul>
-
-          <h3>Service Conditions</h3>
-          <ul>
-            <li>All sessions are private and conducted in a professional, discreet environment.</li>
-            <li>Services are tailored to your preferences within the scope of the selected package.</li>
-            <li>Our masseuses maintain full professional boundaries at all times.</li>
-            <li>Any inappropriate behavior will result in immediate termination of the session without refund.</li>
-          </ul>
-
-          <h3>Extra Services & Additional Charges</h3>
-          <p>Extra services are additional offerings not featured in our standard sensual massage packages and may vary from one masseuse to another. We gladly embrace the opportunity to enhance your sensual massage with these extras.</p>
-          <ul>
-            <li>The fees for extras vary between masseuses and pricelists are available on request.</li>
-            <li>Services not listed as part of our sensual massage packages must only be performed with the explicit consent of the masseuse.</li>
-            <li>Any attempts to request or attain services not included in the massage package will result in the immediate termination of your massage session, without any refund.</li>
-          </ul>
-
-          <h3>Important Policy Notice</h3>
-          <p><strong>It's essential to clarify that sexual intercourse is not considered an extra nor is it a service we offer.</strong> Any attempts to pressure our masseuses into providing this service will result in the immediate termination of your booking without a refund.</p>
-        </div>
-
-        <!-- ===== PAYMENT INFORMATION ===== -->
-        <div class="info-section">
-          <h2>Payment <em>Information</em></h2>
-
-          <h3>When to Pay</h3>
-          <p>Payment is required before your session to secure your booking. We accept cash (NZD) and credit/debit cards. All prices include GST where applicable, and receipts are available upon request.</p>
-
-          <h3>Accepted Payment Methods</h3>
-          <p>We offer the following convenient payment options for our New Zealand customers:</p>
-          <div class="payment-methods">
-            <div class="payment-badge">💳 Credit/Debit Card</div>
-            <div class="payment-badge">💰 Cash (NZD)</div>
-          </div>
-
-          <h3>Payment Details</h3>
-          <ul>
-            <li><strong>Cash:</strong> New Zealand Dollars (NZD) accepted. Please ensure you have the exact amount.</li>
-            <li><strong>Credit/Debit Cards:</strong> We accept Visa, Mastercard, and other major cards. Secure card payment terminal available on-site.</li>
-          </ul>
-
-          <p style="margin-top: 24px;"><strong>Note:</strong> All prices are in New Zealand Dollars (NZD) and include GST where applicable. Receipts are available upon request.</p>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <!-- ========== CONFIRMATION POPUP ========== -->
-  <div class="popup-overlay" id="confirmationPopup">
-    <div class="popup-card">
-      <div class="popup-card-content">
-        <div class="popup-icon">✓</div>
-        <h2>Thank <em>You</em></h2>
-        <p>Your booking request has been received. We'll get back to you shortly to confirm your session.</p>
-        <a href="index.html" class="btn btn-gold popup-home-btn">Back to Home</a>
-      </div>
+    <div class="footer-bottom">
+      <span>© 2026 Good Girls. All rights reserved.</span>
+      <span>Private · Discreet · By Appointment</span>
     </div>
   </div>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">Good <span>Girls</span></div>
-          <p class="footer-tag">Private. Intentional. Beautifully presented.</p>
-          <p class="footer-desc">West Auckland's first private luxury massage studio. Sensual, sophisticated, and discreet.</p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="meet-the-girls.html">Meet the Girls</a>
-        </div>
-
-        <div class="footer-col">
-          <h4>Information</h4>
-          <a href="faqs.html">FAQs</a>
-          <a href="faqs.html#etiquette">Etiquette & Boundaries</a>
-          <a href="contact.html">Contact</a>
-          <a href="booking.html">Book Now</a>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="tel:+6421884475">+64 21 884 475</a>
-          <a href="mailto:thegoodgirlsnz@gmail.com">thegoodgirlsnz@gmail.com</a>
-          <span>West Auckland, NZ</span>
-          <span style="font-size: 0.8rem; margin-top: 8px; opacity: 0.7;">Address shared privately upon booking</span>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>© 2026 Good Girls. All rights reserved.</span>
-        <span>Private · Discreet · By Appointment</span>
-      </div>
-    </div>
-  </footer>
-
+</footer>
   <!-- ========== SCRIPTS ========== -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
