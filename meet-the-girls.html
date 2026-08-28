@@ -656,6 +656,139 @@
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
     }
+
+    /* =========================================
+   REVIEWS SECTION
+   ========================================= */
+.reviews-section {
+  padding: 100px 0;
+  background: var(--dark-alt);
+}
+
+.reviews-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.reviews-header h2 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.reviews-header h2 em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.reviews-grid {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: rgba(20, 24, 36, 0.5);
+  border: 1px solid rgba(201, 168, 76, 0.12);
+  border-radius: 4px;
+  padding: 48px 56px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.review-card:hover {
+  border-color: rgba(201, 168, 76, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.review-stars {
+  font-size: 1.2rem;
+  color: var(--gold);
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.review-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: 24px;
+  quotes: none;
+}
+
+.review-text::before {
+  content: '\201C';
+  font-size: 2.4rem;
+  color: var(--gold);
+  opacity: 0.5;
+  margin-right: 4px;
+}
+
+.review-text::after {
+  content: '\201D';
+  font-size: 2.4rem;
+  color: var(--gold);
+  opacity: 0.5;
+  margin-left: 4px;
+}
+
+.review-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.review-name {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 60px 0;
+  }
+
+  .review-card {
+    padding: 32px 24px;
+  }
+
+  .review-text {
+    font-size: 1.1rem;
+  }
+
+  .review-text::before,
+  .review-text::after {
+    font-size: 1.8rem;
+  }
+
+  .review-stars {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-card {
+    padding: 24px 16px;
+  }
+
+  .review-text {
+    font-size: 1rem;
+  }
+
+  .review-text::before,
+  .review-text::after {
+    font-size: 1.4rem;
+  }
+}
   </style>
 </head>
 <body>
@@ -749,11 +882,33 @@
         <p class="eyebrow">Guest Love</p>
         <div class="gold-line center"></div>
         <blockquote>"Missy has a gift. I've never felt so at ease — her touch is both grounding and deeply sensual. The space she's created is pure magic."</blockquote>
-        <cite>— A regular guest</cite>
+        <cite> A regular guest</cite>
       </div>
     </div>
   </section>
+<!-- ========== REVIEWS SECTION ========== -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-header" data-reveal>
+      <p class="eyebrow">Client Reviews</p>
+      <h2>What our guests <em>say</em></h2>
+      <div class="gold-line center"></div>
+    </div>
 
+    <div class="reviews-grid" data-reveal>
+      <!-- Single Review -->
+      <div class="review-card">
+        <div class="review-stars">✦ ✦ ✦ ✦ ✦</div>
+        <blockquote class="review-text">
+          Thanks again xoxo absolutely outdone my expectations, and was a pleasure to be your first in the new set up (which is top notch by the way) xx Never wanted photographic memory more in my life
+        </blockquote>
+        <div class="review-author">
+          <span class="review-name">A Happy Guest</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- ========== CTA ========== -->
   <section class="cta-section">
     <div class="container">
