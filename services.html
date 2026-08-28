@@ -1,1 +1,1033 @@
-<a href="tel:+64211134233">021 113 4233</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services & Pricing | Good Girls — West Auckland's First Private Luxury Massage Studio</title>
+  <meta name="description" content="Explore the signature experiences at Good Girls — sophisticated sensual massage in West Auckland. Two curated journeys designed for pleasure and presence." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Services & Pricing | Good Girls" />
+  <meta property="og:description" content="Explore the signature experiences at Good Girls — sophisticated sensual massage in West Auckland." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://goodgirlsnz.com/section.html" />
+  <meta property="og:image" content="images/logo.jpg" />
+
+  <!-- Favicon / Icons -->
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="images/logo.jpg" />
+
+  <style>
+    /* =========================================
+       VARIABLES & RESET
+       ========================================= */
+    :root {
+      --dark: #0a0e1a;
+      --dark-alt: #141824;
+      --dark-card: rgba(20, 24, 36, 0.4);
+      --gold: #c9a84c;
+      --gold-light: #d4b85c;
+      --pink: #d4a5a5;
+      --white: #ffffff;
+      --text-light: #e8e8e8;
+      --text-muted: #9a9a9a;
+      --border-gold: rgba(201, 168, 76, 0.15);
+      --border-gold-hover: rgba(201, 168, 76, 0.35);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text-light);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: var(--white);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    em { color: var(--gold); font-style: italic; }
+
+    .gold-line {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 24px 0;
+    }
+
+    .gold-line.center { margin: 24px auto; }
+
+    /* =========================================
+       HEADER
+       ========================================= */
+
+    .site-header {
+      padding: 16px 0;
+      background: rgba(10, 14, 26, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--white);
+      font-style: italic;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+    }
+
+    .brand span { color: var(--gold); }
+
+    .main-nav {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      position: relative;
+    }
+
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+
+    .main-nav a:hover::after { width: 100%; }
+    .main-nav a:hover { color: var(--gold); }
+    .main-nav a.active { color: var(--gold); }
+    .main-nav a.active::after { width: 100%; }
+
+    .nav-cta {
+      background: transparent;
+      color: var(--gold) !important;
+      padding: 10px 28px;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--dark) !important;
+    }
+
+    .nav-cta::after { display: none; }
+
+    .burger {
+      display: none;
+      background: none;
+      border: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .burger span {
+      width: 25px;
+      height: 1px;
+      background: var(--gold);
+      transition: 0.3s;
+    }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 14, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 200;
+      padding: 100px 40px;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .mobile-nav.active { display: flex; }
+
+    .mobile-nav a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-style: italic;
+      color: var(--white);
+      border-bottom: 1px solid var(--border-gold);
+      padding-bottom: 16px;
+    }
+
+    .mobile-nav a:hover { color: var(--gold); }
+
+    .mobile-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background: none;
+      border: none;
+      color: var(--gold);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* =========================================
+       HERO BACKGROUND
+       ========================================= */
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.4) contrast(1.1) saturate(0.9);
+    }
+
+    .hero-background::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at top, rgba(10, 14, 26, 0.7) 0%, transparent 60%),
+        radial-gradient(ellipse at bottom, rgba(10, 14, 26, 0.8) 0%, transparent 60%);
+    }
+
+    /* =========================================
+       PAGE HERO
+       ========================================= */
+    .page-hero {
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 140px 20px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(3rem, 7vw, 5rem);
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 24px;
+      line-height: 1.1;
+    }
+
+    .page-hero h1 em { color: var(--gold); font-style: normal; }
+
+    .page-hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    /* =========================================
+       SERVICES SECTION
+       ========================================= */
+    .services-section {
+      padding: 100px 0 60px;
+    }
+
+    .service-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-bottom: 140px;
+    }
+
+    .service-block:last-child { margin-bottom: 0; }
+
+    .service-block.reverse { direction: rtl; }
+    .service-block.reverse>* { direction: ltr; }
+
+    /* Service Image */
+    .service-image {
+      position: relative;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.85) contrast(1.1) saturate(0.95) blur(2px);
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s ease;
+    }
+
+    .service-image:hover img {
+      transform: scale(1.05);
+      filter: brightness(0.95) contrast(1.1) blur(1px);
+    }
+
+    .service-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .service-image-badge {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      background: rgba(10, 14, 26, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-gold-hover);
+      padding: 8px 20px;
+      border-radius: 2px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold);
+      font-weight: 500;
+      z-index: 2;
+    }
+
+    /* Service Details */
+    .service-details h2 {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-style: italic;
+      margin: 12px 0 24px;
+      line-height: 1.2;
+    }
+
+    .service-details h2 em { color: var(--gold); font-style: normal; }
+
+    .service-description {
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 32px;
+      font-weight: 300;
+    }
+
+    .service-meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 32px 0;
+      padding: 28px;
+      border: 1px solid var(--border-gold);
+      background: var(--dark-card);
+      border-radius: 4px;
+    }
+
+    .meta-item span {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .meta-item strong {
+      color: var(--white);
+      font-weight: 400;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+    }
+
+    .includes-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--gold);
+      margin-bottom: 16px;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
+    .includes-list {
+      list-style: none;
+      margin-bottom: 36px;
+    }
+
+    .includes-list li {
+      padding: 12px 0 12px 28px;
+      position: relative;
+      color: var(--text-light);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.06);
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
+
+    .includes-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 0.85rem;
+    }
+
+    .service-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* =========================================
+       BUTTONS
+       ========================================= */
+    .btn {
+      display: inline-block;
+      padding: 15px 40px;
+      border-radius: 2px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+      text-align: center;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--dark);
+      border-color: var(--gold);
+    }
+
+    .btn-gold:hover {
+      background: transparent;
+      color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201, 168, 76, 0.2);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-light);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--dark);
+      border-color: var(--white);
+    }
+
+    .btn-block { width: 100%; }
+
+    /* =========================================
+       PRICING NOTE SECTION
+       ========================================= */
+    .pricing-note {
+      padding: 80px 0;
+      background: var(--dark-alt);
+      text-align: center;
+    }
+
+    .pricing-note-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .pricing-note h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .pricing-note h2 em { color: var(--gold); font-style: normal; }
+
+    .pricing-note p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    .pricing-note .note-highlight {
+      color: var(--pink);
+      font-style: italic;
+    }
+
+    /* =========================================
+       EXPERIENCE PROMISE
+       ========================================= */
+    .promise-section {
+      padding: 100px 0;
+    }
+
+    .promise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 60px;
+    }
+
+    .promise-card {
+      text-align: center;
+      padding: 40px 28px;
+      border: 1px solid var(--border-gold);
+      border-radius: 4px;
+      background: var(--dark-card);
+      transition: all 0.4s ease;
+    }
+
+    .promise-card:hover {
+      border-color: var(--border-gold-hover);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .promise-icon {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .promise-card h3 {
+      font-size: 1.4rem;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .promise-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* =========================================
+       CTA SECTION
+       ========================================= */
+    .cta-section {
+      padding: 120px 0;
+      text-align: center;
+      background: var(--dark-alt);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .cta-section h2 em { color: var(--gold); font-style: normal; }
+
+    .cta-section p {
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 300;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* =========================================
+       FOOTER
+       ========================================= */
+    .footer {
+      background: #050810;
+      color: var(--text-muted);
+      padding: 80px 0 32px;
+      border-top: 1px solid var(--border-gold);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--white);
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand span { color: var(--gold); }
+
+    .footer-tag {
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .footer-desc {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .footer-col a,
+    .footer-col span {
+      display: block;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    .footer-col a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-gold);
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* =========================================
+       ANIMATIONS
+       ========================================= */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================
+       RESPONSIVE
+       ========================================= */
+    @media (max-width: 992px) {
+      .service-block {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin-bottom: 100px;
+      }
+
+      .service-block.reverse { direction: ltr; }
+
+      .service-image { aspect-ratio: 3/4; }
+
+      .promise-grid { grid-template-columns: 1fr; gap: 20px; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 768px) {
+      .main-nav { display: none; }
+      .burger { display: flex; }
+
+      .page-hero { padding: 120px 20px 60px; min-height: 45vh; }
+
+      .services-section { padding: 60px 0 40px; }
+
+      .service-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 20px;
+      }
+
+      .service-actions { flex-direction: column; }
+      .service-actions .btn { width: 100%; }
+
+      .pricing-note,
+      .promise-section { padding: 60px 0; }
+      .cta-section { padding: 80px 0; }
+      .cta-actions { flex-direction: column; align-items: center; }
+      .cta-actions .btn { width: 100%; max-width: 320px; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpg" alt="Good Girls" class="brand-logo" />
+      Good <span>Girls</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="meet-the-girls.html">Meet the Girls</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html" class="nav-cta">Book Now</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">×</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="meet-the-girls.html">Meet the Girls</a>
+  <a href="faqs.html">FAQs</a>
+  <a href="contact.html">Contact</a>
+  <a href="booking.html">Book Now</a>
+</div>
+
+<main>
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="hero-background">
+       <img src="images/bg2.png" alt="Good Girls Private Sensual Massage" />
+    </div>
+    <div class="page-hero-content">
+      <p class="eyebrow">Services & Pricing</p>
+      <h1>Curated for <em>pleasure</em></h1>
+      <p>Two signature journeys, each carefully crafted to awaken the senses and honour the art of unhurried touch. Choose the experience that calls to you.</p>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="services-section">
+    <div class="container">
+
+      <!-- SERVICE 1: The Signature Experience -->
+      <div class="service-block" data-reveal>
+        <div class="service-image">
+          <span class="service-image-badge">The Original</span>
+          <img src="images/bgg.jpg" alt="The Signature Experience at Good Girls" loading="lazy" />
+        </div>
+        <div class="service-details">
+          <p class="eyebrow">Signature</p>
+          <h2>The Signature <em>Experience</em></h2>
+          <p class="service-description">
+            An unhurried journey into deep relaxation and sensual awakening. Warm oils, intuitive touch, and a pace that allows you to fully surrender to the moment. This is the heart of Good Girls — a beautifully considered experience designed to help you feel desired, present, and completely at ease.
+          </p>
+
+          <div class="service-meta-grid">
+            <div class="meta-item">
+              <span>Duration</span>
+              <strong>30 · 60 · 90 · 120 min</strong>
+            </div>
+            <div class="meta-item">
+              <span>Investment</span>
+              <strong>$140 · $190 · $290 · $380</strong>
+            </div>
+            <div class="meta-item">
+              <span>Setting</span>
+              <strong>Private Suite</strong>
+            </div>
+            <div class="meta-item">
+              <span>For</span>
+              <strong>Men & Women</strong>
+            </div>
+          </div>
+
+          <p class="includes-title">Your experience includes</p>
+          <ul class="includes-list">
+            <li>Warm aromatic oils and heated towels</li>
+            <li>Private, luxuriously appointed suite</li>
+            <li>Slow, intentional sensual massage</li>
+            <li>Body-to-body techniques</li>
+            <li>Complimentary refreshments</li>
+          </ul>
+
+          <div class="service-actions">
+            <a href="booking.html?service=signature" class="btn btn-gold">Book This Experience</a>
+            <a href="contact.html" class="btn btn-outline">Enquire First</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICE 2: Training Doubles -->
+      <div class="service-block reverse" data-reveal>
+        <div class="service-image">
+          <span class="service-image-badge">The Exclusive</span>
+          <img src="images/sd.jpg" alt="Training Doubles at Good Girls" loading="lazy" />
+        </div>
+        <div class="service-details">
+          <p class="eyebrow">Exclusive</p>
+          <h2>Training <em>Doubles</em></h2>
+          <p class="service-description">
+            Two attentive hands, two distinct energies. A rare opportunity to experience the art of sensual touch from both a seasoned practitioner and a rising talent. Guided by our lead, this immersive session is a masterclass in presence, connection, and the pleasure of being truly seen.
+          </p>
+
+          <div class="service-meta-grid">
+            <div class="meta-item">
+              <span>Duration</span>
+              <strong>60 · 90 · 120 min</strong>
+            </div>
+            <div class="meta-item">
+              <span>Investment</span>
+              <strong>$420 · $600 · $780</strong>
+            </div>
+            <div class="meta-item">
+              <span>Setting</span>
+              <strong>Private Suite</strong>
+            </div>
+            <div class="meta-item">
+              <span>For</span>
+              <strong>Men & Women</strong>
+            </div>
+          </div>
+
+          <p class="includes-title">Your experience includes</p>
+          <ul class="includes-list">
+            <li>Two dedicated masseuses</li>
+            <li>Double the warm aromatic oils</li>
+            <li>Extended sensual teasing session</li>
+            <li>Private, luxuriously appointed suite</li>
+            <li>Guidance from our lead practitioner</li>
+          </ul>
+
+          <div class="service-actions">
+            <a href="booking.html?service=training" class="btn btn-gold">Book This Experience</a>
+            <a href="contact.html" class="btn btn-outline">Enquire First</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== PRICING NOTE ========== -->
+  <section class="pricing-note">
+    <div class="container">
+      <div class="pricing-note-inner" data-reveal>
+        <p class="eyebrow">A Note on Pricing</p>
+        <h2>Transparent & <em>considered</em></h2>
+        <div class="gold-line center"></div>
+        <p>All prices are in New Zealand Dollars (NZD) and include GST where applicable. Payment is required before your session to secure your booking.</p>
+        <p class="note-highlight">Extra services may be available and vary between practitioners. Pricelists for extras are available on request. All extras require explicit consent.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE PROMISE ========== -->
+  <section class="promise-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;" data-reveal>
+        <p class="eyebrow">Every Session Promises</p>
+        <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-style: italic;">The Good Girls <em>standard</em></h2>
+      </div>
+
+      <div class="promise-grid">
+        <div class="promise-card" data-reveal>
+          <div class="promise-icon">✦</div>
+          <h3>Complete Privacy</h3>
+          <p>Your visit, your details, and your experience remain entirely confidential. Discretion is non-negotiable.</p>
+        </div>
+        <div class="promise-card" data-reveal>
+          <div class="promise-icon">◈</div>
+          <h3>Unhurried Pace</h3>
+          <p>Nothing is rushed. Every touch, every pause, every breath is part of a carefully considered experience.</p>
+        </div>
+        <div class="promise-card" data-reveal>
+          <div class="promise-icon">❀</div>
+          <h3>Warm Welcome</h3>
+          <p>Whoever you are, you'll be received with warmth, respect, and genuine feminine hospitality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content" data-reveal>
+        <p class="eyebrow">By Appointment Only</p>
+        <h2>Not sure which <em>experience</em> to choose?</h2>
+        <p>Reach out and we'll help you find the perfect fit for what you're seeking. No pressure, just guidance.</p>
+        <div class="cta-actions">
+          <a href="booking.html" class="btn btn-gold">Book Now</a>
+          <a href="contact.html" class="btn btn-outline">Ask a Question</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Good <span>Girls</span></div>
+        <p class="footer-tag">Private. Intentional. Beautifully presented.</p>
+        <p class="footer-desc">Private sensual massage in West Auckland. Sensual, sophisticated, and discreet.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="meet-the-girls.html">Meet the Girls</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Information</h4>
+        <a href="faqs.html">FAQs</a>
+        <a href="faqs.html#etiquette">Etiquette & Boundaries</a>
+        <a href="contact.html">Contact</a>
+        <a href="booking.html">Book Now</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+64211134233">021 113 4233</a>
+        <a href="mailto:thegoodgirlsnz@gmail.com">thegoodgirlsnz@gmail.com</a>
+        <span>West Auckland, NZ</span>
+        <span style="font-size: 0.8rem; margin-top: 8px; opacity: 0.7;">Address shared privately upon booking</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Good Girls. All rights reserved.</span>
+      <span>Private · Discreet · By Appointment</span>
+    </div>
+  </div>
+</footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // Mobile menu
+    const burger = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileClose = document.getElementById('mobileClose');
+
+    if (burger && mobileNav && mobileClose) {
+      burger.addEventListener('click', () => {
+        mobileNav.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      mobileClose.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // Scroll reveal animations
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      revealObserver.observe(el);
+    });
+  </script>
+</body>
+</html>
