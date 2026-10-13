@@ -396,6 +396,75 @@
       font-size: 1.3rem;
     }
 
+    /* ---- PRICE TABLE (for Signature) ---- */
+    .price-table {
+      margin: 24px 0 32px;
+      border: 1px solid var(--border-gold);
+      background: var(--dark-card);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .price-table-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      padding: 14px 24px;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+      align-items: center;
+    }
+
+    .price-table-row:last-child { border-bottom: none; }
+
+    .price-table-row .duration {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
+
+    .price-table-row .price {
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    /* ---- FEATURED PRICE BLOCK (for Exclusive) ---- */
+    .price-feature {
+      margin: 24px 0 32px;
+      padding: 32px 28px;
+      border: 1px solid var(--border-gold);
+      background: var(--dark-card);
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .price-feature .feature-sub {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .price-feature .feature-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      color: var(--gold);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .price-feature .feature-detail {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
+
     .includes-title {
       font-family: 'Inter', sans-serif;
       font-size: 0.75rem;
@@ -736,6 +805,8 @@
 
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+
+      .price-feature .feature-price { font-size: 2rem; }
     }
   </style>
 </head>
@@ -804,15 +875,34 @@
             An unhurried journey into deep relaxation and sensual awakening. Warm oils, intuitive touch, and a pace that allows you to fully surrender to the moment. This is the heart of Good Girls — a beautifully considered experience designed to help you feel desired, present, and completely at ease.
           </p>
 
+          <div class="price-table">
+            <div class="price-table-row">
+              <span class="duration">15 minutes</span>
+              <span class="price">$120</span>
+            </div>
+            <div class="price-table-row">
+              <span class="duration">30 minutes</span>
+              <span class="price">$180</span>
+            </div>
+            <div class="price-table-row">
+              <span class="duration">45 minutes</span>
+              <span class="price">$220</span>
+            </div>
+            <div class="price-table-row">
+              <span class="duration">60 minutes</span>
+              <span class="price">$260</span>
+            </div>
+            <div class="price-table-row">
+              <span class="duration">90 minutes</span>
+              <span class="price">$360</span>
+            </div>
+            <div class="price-table-row">
+              <span class="duration">120 minutes</span>
+              <span class="price">$480</span>
+            </div>
+          </div>
+
           <div class="service-meta-grid">
-            <div class="meta-item">
-              <span>Duration</span>
-              <strong>30 · 60 · 90 · 120 min</strong>
-            </div>
-            <div class="meta-item">
-              <span>Investment</span>
-              <strong>$140 · $190 · $290 · $380</strong>
-            </div>
             <div class="meta-item">
               <span>Setting</span>
               <strong>Private Suite</strong>
@@ -839,28 +929,26 @@
         </div>
       </div>
 
-      <!-- SERVICE 2: Training Doubles -->
+      <!-- SERVICE 2: The Exclusive — Bi Double Experience -->
       <div class="service-block reverse" data-reveal>
         <div class="service-image">
           <span class="service-image-badge">The Exclusive</span>
-          <img src="images/sd.jpg" alt="Training Doubles at Good Girls" loading="lazy" />
+          <img src="images/sd.jpg" alt="The Exclusive — Bi Double Experience at Good Girls" loading="lazy" />
         </div>
         <div class="service-details">
           <p class="eyebrow">Exclusive</p>
-          <h2>Training <em>Doubles</em></h2>
+          <h2>The Exclusive — <em>Bi Double Experience</em></h2>
           <p class="service-description">
             Two attentive hands, two distinct energies. A rare opportunity to experience the art of sensual touch from both a seasoned practitioner and a rising talent. Guided by our lead, this immersive session is a masterclass in presence, connection, and the pleasure of being truly seen.
           </p>
 
+          <div class="price-feature">
+            <span class="feature-sub">Two Girls · 60 Minutes</span>
+            <div class="feature-price">$650</div>
+            <span class="feature-detail">A beautifully curated session with two masseuses</span>
+          </div>
+
           <div class="service-meta-grid">
-            <div class="meta-item">
-              <span>Duration</span>
-              <strong>60 · 90 · 120 min</strong>
-            </div>
-            <div class="meta-item">
-              <span>Investment</span>
-              <strong>$420 · $600 · $780</strong>
-            </div>
             <div class="meta-item">
               <span>Setting</span>
               <strong>Private Suite</strong>
