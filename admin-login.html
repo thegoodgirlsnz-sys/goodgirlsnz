@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | Good Girls</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="images/logo.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --dark: #0a0e1a;
+      --dark-alt: #141824;
+      --dark-card: rgba(20, 24, 36, 0.6);
+      --gold: #c9a84c;
+      --gold-light: #d4b85c;
+      --white: #ffffff;
+      --text-light: #e8e8e8;
+      --text-muted: #9a9a9a;
+      --border-gold: rgba(201, 168, 76, 0.2);
+      --border-gold-hover: rgba(201, 168, 76, 0.5);
+      --error: #d47a7a;
+      --success: #8fbf7a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text-light);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Subtle background glow */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at top, rgba(201, 168, 76, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at bottom, rgba(201, 168, 76, 0.05) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .login-wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 460px;
+    }
+
+    .login-brand {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .login-brand a {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-style: italic;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .login-brand img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+    }
+
+    .login-brand span { color: var(--gold); }
+
+    .login-card {
+      background: var(--dark-card);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-gold);
+      border-radius: 4px;
+      padding: 48px 40px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .login-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at top, rgba(201, 168, 76, 0.06) 0%, transparent 60%);
+      border-radius: 4px;
+      pointer-events: none;
+    }
+
+    .login-card-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.7rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 12px;
+      display: block;
+      text-align: center;
+    }
+
+    .login-card h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-style: italic;
+      color: var(--white);
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .login-card h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .login-sub {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+      font-weight: 300;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+      font-size: 0.75rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      border-radius: 2px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s;
+      background: rgba(10, 14, 26, 0.5);
+      color: var(--text-light);
+    }
+
+    .form-group input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: rgba(10, 14, 26, 0.8);
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px 40px;
+      border-radius: 2px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: var(--dark);
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201, 168, 76, 0.2);
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .message {
+      display: none;
+      padding: 12px 16px;
+      border-radius: 2px;
+      font-size: 0.88rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .message.show { display: block; }
+
+    .message.error {
+      background: rgba(212, 122, 122, 0.1);
+      border: 1px solid rgba(212, 122, 122, 0.35);
+      color: var(--error);
+    }
+
+    .message.success {
+      background: rgba(143, 191, 122, 0.1);
+      border: 1px solid rgba(143, 191, 122, 0.35);
+      color: var(--success);
+    }
+
+    .login-footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .login-footer a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .login-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .back-link a {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .back-link a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 480px) {
+      .login-card {
+        padding: 36px 24px;
+      }
+
+      .login-card h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-wrapper">
+
+    <div class="login-brand">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="Good Girls" />
+        Good <span>Girls</span>
+      </a>
+    </div>
+
+    <div class="login-card">
+      <div class="login-card-content">
+
+        <p class="eyebrow">Admin Access</p>
+        <h1>Sign <em>In</em></h1>
+        <p class="login-sub">Private area — authorised users only</p>
+
+        <div class="message" id="message"></div>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your@email.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Your password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn" id="loginBtn">Sign In</button>
+        </form>
+
+        <div class="login-footer">
+          Forgot your password? <a href="#" id="forgotLink">Reset it</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="back-link">
+      <a href="index.html">← Back to website</a>
+    </div>
+
+  </div>
+
+  <!-- Supabase JS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Supabase config (URL + anon key) -->
+  <script src="supabase-config.js"></script>
+
+  <!-- Login logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      const form = document.getElementById('loginForm');
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('password');
+      const loginBtn = document.getElementById('loginBtn');
+      const messageEl = document.getElementById('message');
+      const forgotLink = document.getElementById('forgotLink');
+
+      // ---- Guard: make sure Supabase is configured ----
+      if (!window.supabaseClient) {
+        showMessage('error', 'Supabase is not configured. Please check supabase-config.js.');
+        loginBtn.disabled = true;
+        return;
+      }
+
+      // ---- If already logged in, go straight to dashboard ----
+      window.supabaseClient.auth.getSession().then(function (result) {
+        if (result && result.data && result.data.session) {
+          window.location.href = 'admin-dashboard.html';
+        }
+      });
+
+      // ---- Helpers ----
+      function showMessage(type, text) {
+        messageEl.className = 'message ' + type + ' show';
+        messageEl.textContent = text;
+      }
+
+      function hideMessage() {
+        messageEl.className = 'message';
+        messageEl.textContent = '';
+      }
+
+      function setLoading(isLoading) {
+        loginBtn.disabled = isLoading;
+        loginBtn.textContent = isLoading ? 'Signing in…' : 'Sign In';
+      }
+
+      // ---- Login submit ----
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        hideMessage();
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        if (!email || !password) {
+          showMessage('error', 'Please enter your email and password.');
+          return;
+        }
+
+        setLoading(true);
+
+        window.supabaseClient.auth
+          .signInWithPassword({ email: email, password: password })
+          .then(function (response) {
+            if (response.error) {
+              setLoading(false);
+              showMessage('error', response.error.message || 'Login failed. Please try again.');
+              return;
+            }
+
+            if (!response.data || !response.data.session) {
+              setLoading(false);
+              showMessage('error', 'Login failed. No session was created.');
+              return;
+            }
+
+            showMessage('success', 'Welcome back. Redirecting…');
+            setTimeout(function () {
+              window.location.href = 'admin-dashboard.html';
+            }, 600);
+          })
+          .catch(function (err) {
+            setLoading(false);
+            console.error('Login error:', err);
+            showMessage('error', 'Network error. Please check your connection.');
+          });
+      });
+
+      // ---- Password reset ----
+      if (forgotLink) {
+        forgotLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          hideMessage();
+
+          const email = emailInput.value.trim();
+          if (!email) {
+            showMessage('error', 'Please enter your email address first, then tap "Reset it".');
+            return;
+          }
+
+          window.supabaseClient.auth
+            .resetPasswordForEmail(email, {
+              redirectTo: window.location.origin + '/admin-login.html'
+            })
+            .then(function (response) {
+              if (response.error) {
+                showMessage('error', response.error.message || 'Could not send reset link.');
+                return;
+              }
+              showMessage('success', 'Password reset link sent. Check your email.');
+            })
+            .catch(function (err) {
+              console.error('Reset error:', err);
+              showMessage('error', 'Network error. Please try again.');
+            });
+        });
+      }
+
+    });
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+</body>
+</html>

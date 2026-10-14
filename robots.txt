@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin-login.html
+Disallow: /admin-dashboard.html
+Disallow: /admin-login
+Disallow: /admin-dashboard
+Sitemap: https://goodgirlsnz.com/sitemap.xml

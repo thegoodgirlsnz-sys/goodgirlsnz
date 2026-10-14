@@ -655,46 +655,7 @@
 </footer>
 
 <script>
-/* ==========================================================
-   ⭐ MISSY — WEEKLY AVAILABILITY
-   ==========================================================
-   
-   ✏️ EDIT ONLY THIS SECTION EACH WEEK
-   
-   HOW TO USE:
-   
-   1. Update `weekLabel` → e.g. 'Week of 6 October'
-   
-   2. For each day, choose a status:
-        'available' → shows green tag + times you set
-        'limited'   → shows amber "Limited Availability" tag
-        'booked'    → shows red "Fully Booked" tag
-        'closed'    → shows grey "Closed" tag
-   
-   3. If status is 'available', set `start` and `end` times.
-      If not available, leave start/end as empty strings ''.
-   
-   4. `note` is optional — use it if you want a custom message.
-      Leave as '' to use the default text for that status.
-   
-   That's it. The page rebuilds itself automatically.
-   ========================================================== */
-
-const weekLabel = 'This Week';
-
-const WEEKLY_AVAILABILITY = [
-  { day: 'Monday',    status: 'available', start: '10:00am', end: '4:00pm', note: '' },
-  { day: 'Tuesday',   status: 'available', start: '12:00pm', end: '8:00pm', note: '' },
-  { day: 'Wednesday', status: 'booked',    start: '',        end: '',       note: 'Fully Booked' },
-  { day: 'Thursday',  status: 'available', start: '10:00am', end: '6:00pm', note: '' },
-  { day: 'Friday',    status: 'available', start: '2:00pm',  end: '8:00pm', note: '' },
-  { day: 'Saturday',  status: 'limited',   start: '',        end: '',       note: 'Limited Availability' },
-  { day: 'Sunday',    status: 'closed',    start: '',        end: '',       note: 'Closed' }
-];
-
-/* ==========================================================
-   DO NOT EDIT BELOW THIS LINE
-   ========================================================== */
+/* Availability is loaded live from Supabase by js/availability.js */
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -720,43 +681,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Week label
-  const weekLabelEl = document.getElementById('weekLabel');
-  if (weekLabelEl) weekLabelEl.textContent = weekLabel;
-
-  // Helpers
-  function getStatusText(item) {
-    if (item.note && item.note.trim() !== '') return item.note;
-    switch (item.status) {
-      case 'available': return 'Available';
-      case 'limited':   return 'Limited Availability';
-      case 'booked':    return 'Fully Booked';
-      case 'closed':    return 'Closed';
-      default:          return '';
-    }
-  }
-
-  function getInfoText(item) {
-    if (item.status === 'available' && item.start && item.end) {
-      return 'Available: ' + item.start + ' – ' + item.end;
-    }
-    return getStatusText(item);
-  }
-
-  // Render days
-  const grid = document.getElementById('availabilityGrid');
-  if (grid) {
-    WEEKLY_AVAILABILITY.forEach(function(item) {
-      const card = document.createElement('div');
-      card.className = 'day-card';
-      card.innerHTML =
-        '<div class="day-name">' + item.day + '</div>' +
-        '<div class="day-info">' + getInfoText(item) + '</div>' +
-        '<span class="day-status ' + item.status + '">' + getStatusText(item) + '</span>';
-      grid.appendChild(card);
-    });
-  }
-
   // Scroll reveal
   const revealObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
@@ -773,5 +697,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="js/availability.js"></script>
 </body>
 </html>
