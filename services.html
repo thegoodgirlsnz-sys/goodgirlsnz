@@ -396,75 +396,6 @@
       font-size: 1.3rem;
     }
 
-    /* ---- PRICE TABLE (for Signature) ---- */
-    .price-table {
-      margin: 24px 0 32px;
-      border: 1px solid var(--border-gold);
-      background: var(--dark-card);
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    .price-table-row {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      padding: 14px 24px;
-      border-bottom: 1px solid rgba(201, 168, 76, 0.08);
-      align-items: center;
-    }
-
-    .price-table-row:last-child { border-bottom: none; }
-
-    .price-table-row .duration {
-      color: var(--text-light);
-      font-size: 0.95rem;
-      font-weight: 300;
-    }
-
-    .price-table-row .price {
-      color: var(--gold);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
-
-    /* ---- FEATURED PRICE BLOCK (for Exclusive) ---- */
-    .price-feature {
-      margin: 24px 0 32px;
-      padding: 32px 28px;
-      border: 1px solid var(--border-gold);
-      background: var(--dark-card);
-      border-radius: 4px;
-      text-align: center;
-    }
-
-    .price-feature .feature-sub {
-      display: block;
-      font-size: 0.7rem;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-      font-weight: 500;
-    }
-
-    .price-feature .feature-price {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.4rem;
-      color: var(--gold);
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      line-height: 1.1;
-      margin-bottom: 6px;
-    }
-
-    .price-feature .feature-detail {
-      color: var(--text-light);
-      font-size: 0.95rem;
-      font-weight: 300;
-    }
-
     .includes-title {
       font-family: 'Inter', sans-serif;
       font-size: 0.75rem;
@@ -805,8 +736,6 @@
 
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-
-      .price-feature .feature-price { font-size: 2rem; }
     }
   </style>
 </head>
@@ -849,12 +778,12 @@
   <!-- ========== PAGE HERO ========== -->
   <section class="page-hero">
     <div class="hero-background">
-       <img src="images/bg2.png" alt="Good Girls Private Sensual Massage" />
+       <img data-cms-img="services.img001" src="images/bg2.png" alt="Good Girls Private Sensual Massage" />
     </div>
     <div class="page-hero-content">
-      <p class="eyebrow">Services & Pricing</p>
-      <h1>Curated for <em>pleasure</em></h1>
-      <p>Two signature journeys, each carefully crafted to awaken the senses and honour the art of unhurried touch. Choose the experience that calls to you.</p>
+      <p data-cms="services.t002" class="eyebrow">Services & Pricing</p>
+      <h1 data-cms="services.t003">Curated for <em>pleasure</em></h1>
+      <p data-cms="services.t004">Two signature journeys, each carefully crafted to awaken the senses and honour the art of unhurried touch. Choose the experience that calls to you.</p>
     </div>
   </section>
 
@@ -865,112 +794,95 @@
       <!-- SERVICE 1: The Signature Experience -->
       <div class="service-block" data-reveal>
         <div class="service-image">
-          <span class="service-image-badge">The Original</span>
-          <img src="images/bgg.jpg" alt="The Signature Experience at Good Girls" loading="lazy" />
+          <span data-cms="services.t005" class="service-image-badge">The Original</span>
+          <img data-cms-img="services.img006" src="images/bgg.jpg" alt="The Signature Experience at Good Girls" loading="lazy" />
         </div>
         <div class="service-details">
-          <p class="eyebrow">Signature</p>
-          <h2>The Signature <em>Experience</em></h2>
-          <p class="service-description">
+          <p data-cms="services.t007" class="eyebrow">Signature</p>
+          <h2 data-cms="services.t008">The Signature <em>Experience</em></h2>
+          <p data-cms="service.signature.description" class="service-description">
             An unhurried journey into deep relaxation and sensual awakening. Warm oils, intuitive touch, and a pace that allows you to fully surrender to the moment. This is the heart of Good Girls — a beautifully considered experience designed to help you feel desired, present, and completely at ease.
           </p>
 
-          <div class="price-table">
-            <div class="price-table-row">
-              <span class="duration">15 minutes</span>
-              <span class="price">$120</span>
-            </div>
-            <div class="price-table-row">
-              <span class="duration">30 minutes</span>
-              <span class="price">$180</span>
-            </div>
-            <div class="price-table-row">
-              <span class="duration">45 minutes</span>
-              <span class="price">$220</span>
-            </div>
-            <div class="price-table-row">
-              <span class="duration">60 minutes</span>
-              <span class="price">$260</span>
-            </div>
-            <div class="price-table-row">
-              <span class="duration">90 minutes</span>
-              <span class="price">$360</span>
-            </div>
-            <div class="price-table-row">
-              <span class="duration">120 minutes</span>
-              <span class="price">$480</span>
-            </div>
-          </div>
-
           <div class="service-meta-grid">
             <div class="meta-item">
-              <span>Setting</span>
-              <strong>Private Suite</strong>
+              <span data-cms="services.t010">Duration</span>
+              <strong data-cms="service.signature.durations">30 · 60 · 90 · 120 min</strong>
             </div>
             <div class="meta-item">
-              <span>For</span>
-              <strong>Men & Women</strong>
+              <span data-cms="services.t012">Investment</span>
+              <strong data-cms="service.signature.prices">$140 · $190 · $290 · $380</strong>
+            </div>
+            <div class="meta-item">
+              <span data-cms="services.t014">Setting</span>
+              <strong data-cms="services.t015">Private Suite</strong>
+            </div>
+            <div class="meta-item">
+              <span data-cms="services.t016">For</span>
+              <strong data-cms="services.t017">Men & Women</strong>
             </div>
           </div>
 
-          <p class="includes-title">Your experience includes</p>
+          <p data-cms="services.t018" class="includes-title">Your experience includes</p>
           <ul class="includes-list">
-            <li>Warm aromatic oils and heated towels</li>
-            <li>Private, luxuriously appointed suite</li>
-            <li>Slow, intentional sensual massage</li>
-            <li>Body-to-body techniques</li>
-            <li>Complimentary refreshments</li>
+            <li data-cms="services.t019">Warm aromatic oils and heated towels</li>
+            <li data-cms="services.t020">Private, luxuriously appointed suite</li>
+            <li data-cms="services.t021">Slow, intentional sensual massage</li>
+            <li data-cms="services.t022">Body-to-body techniques</li>
+            <li data-cms="services.t023">Complimentary refreshments</li>
           </ul>
 
           <div class="service-actions">
-            <a href="booking.html?service=signature" class="btn btn-gold">Book This Experience</a>
-            <a href="contact.html" class="btn btn-outline">Enquire First</a>
+            <a data-cms="services.t024" href="booking.html?service=signature" class="btn btn-gold">Book This Experience</a>
+            <a data-cms="services.t025" href="contact.html" class="btn btn-outline">Enquire First</a>
           </div>
         </div>
       </div>
 
-      <!-- SERVICE 2: The Exclusive — Bi Double Experience -->
+      <!-- SERVICE 2: Training Doubles -->
       <div class="service-block reverse" data-reveal>
         <div class="service-image">
-          <span class="service-image-badge">The Exclusive</span>
-          <img src="images/sd.jpg" alt="The Exclusive — Bi Double Experience at Good Girls" loading="lazy" />
+          <span data-cms="services.t026" class="service-image-badge">The Exclusive</span>
+          <img data-cms-img="services.img027" src="images/sd.jpg" alt="Training Doubles at Good Girls" loading="lazy" />
         </div>
         <div class="service-details">
-          <p class="eyebrow">Exclusive</p>
-          <h2>The Exclusive — <em>Bi Double Experience</em></h2>
-          <p class="service-description">
+          <p data-cms="services.t028" class="eyebrow">Exclusive</p>
+          <h2 data-cms="services.t029">Training <em>Doubles</em></h2>
+          <p data-cms="service.training.description" class="service-description">
             Two attentive hands, two distinct energies. A rare opportunity to experience the art of sensual touch from both a seasoned practitioner and a rising talent. Guided by our lead, this immersive session is a masterclass in presence, connection, and the pleasure of being truly seen.
           </p>
 
-          <div class="price-feature">
-            <span class="feature-sub">Two Girls · 60 Minutes</span>
-            <div class="feature-price">$650</div>
-            <span class="feature-detail">A beautifully curated session with two masseuses</span>
-          </div>
-
           <div class="service-meta-grid">
             <div class="meta-item">
-              <span>Setting</span>
-              <strong>Private Suite</strong>
+              <span data-cms="services.t031">Duration</span>
+              <strong data-cms="service.training.durations">60 · 90 · 120 min</strong>
             </div>
             <div class="meta-item">
-              <span>For</span>
-              <strong>Men & Women</strong>
+              <span data-cms="services.t033">Investment</span>
+              <strong data-cms="service.training.prices">$420 · $600 · $780</strong>
+            </div>
+            <div class="meta-item">
+              <span data-cms="services.t035">Setting</span>
+              <strong data-cms="services.t036">Private Suite</strong>
+            </div>
+            <div class="meta-item">
+              <span data-cms="services.t037">For</span>
+              <strong data-cms="services.t038">Men & Women</strong>
             </div>
           </div>
 
-          <p class="includes-title">Your experience includes</p>
+          <p data-cms="services.t039" class="includes-title">Your experience includes</p>
           <ul class="includes-list">
-            <li>Two dedicated masseuses</li>
-            <li>Double the warm aromatic oils</li>
-            <li>Extended sensual teasing session</li>
-            <li>Private, luxuriously appointed suite</li>
-            <li>Guidance from our lead practitioner</li>
+            <li data-cms="services.t040">Two dedicated masseuses</li>
+            <li data-cms="services.t041">Double the warm aromatic oils</li>
+            <li data-cms="services.t042">Extended sensual teasing session</li>
+            <li data-cms="services.t043">Private, luxuriously appointed suite</li>
+            <li data-cms="services.t044">Guidance from our lead practitioner</li>
           </ul>
 
           <div class="service-actions">
-            <a href="booking.html?service=training" class="btn btn-gold">Book This Experience</a>
-            <a href="contact.html" class="btn btn-outline">Enquire First</a>
+            <a data-cms="services.t045" href="booking.html?service=training" class="btn btn-gold">Book This Experience</a>
+            <a data-cms="services.t046" href="contact.html" class="btn btn-outline">Enquire First</a>
           </div>
         </div>
       </div>
@@ -982,11 +894,11 @@
   <section class="pricing-note">
     <div class="container">
       <div class="pricing-note-inner" data-reveal>
-        <p class="eyebrow">A Note on Pricing</p>
-        <h2>Transparent & <em>considered</em></h2>
+        <p data-cms="services.t047" class="eyebrow">A Note on Pricing</p>
+        <h2 data-cms="services.t048">Transparent & <em>considered</em></h2>
         <div class="gold-line center"></div>
-        <p>All prices are in New Zealand Dollars (NZD) and include GST where applicable. Payment is required before your session to secure your booking.</p>
-        <p class="note-highlight">Extra services may be available and vary between practitioners. Pricelists for extras are available on request. All extras require explicit consent.</p>
+        <p data-cms="services.t049">All prices are in New Zealand Dollars (NZD) and include GST where applicable. Payment is required before your session to secure your booking.</p>
+        <p data-cms="services.t050" class="note-highlight">Extra services may be available and vary between practitioners. Pricelists for extras are available on request. All extras require explicit consent.</p>
       </div>
     </div>
   </section>
@@ -995,25 +907,25 @@
   <section class="promise-section">
     <div class="container">
       <div style="text-align: center; max-width: 700px; margin: 0 auto;" data-reveal>
-        <p class="eyebrow">Every Session Promises</p>
-        <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-style: italic;">The Good Girls <em>standard</em></h2>
+        <p data-cms="services.t051" class="eyebrow">Every Session Promises</p>
+        <h2 data-cms="services.t052" style="font-size: clamp(2rem, 4vw, 2.8rem); font-style: italic;">The Good Girls <em>standard</em></h2>
       </div>
 
       <div class="promise-grid">
         <div class="promise-card" data-reveal>
           <div class="promise-icon">✦</div>
-          <h3>Complete Privacy</h3>
-          <p>Your visit, your details, and your experience remain entirely confidential. Discretion is non-negotiable.</p>
+          <h3 data-cms="services.t053">Complete Privacy</h3>
+          <p data-cms="services.t054">Your visit, your details, and your experience remain entirely confidential. Discretion is non-negotiable.</p>
         </div>
         <div class="promise-card" data-reveal>
           <div class="promise-icon">◈</div>
-          <h3>Unhurried Pace</h3>
-          <p>Nothing is rushed. Every touch, every pause, every breath is part of a carefully considered experience.</p>
+          <h3 data-cms="services.t055">Unhurried Pace</h3>
+          <p data-cms="services.t056">Nothing is rushed. Every touch, every pause, every breath is part of a carefully considered experience.</p>
         </div>
         <div class="promise-card" data-reveal>
           <div class="promise-icon">❀</div>
-          <h3>Warm Welcome</h3>
-          <p>Whoever you are, you'll be received with warmth, respect, and genuine feminine hospitality.</p>
+          <h3 data-cms="services.t057">Warm Welcome</h3>
+          <p data-cms="services.t058">Whoever you are, you'll be received with warmth, respect, and genuine feminine hospitality.</p>
         </div>
       </div>
     </div>
@@ -1023,12 +935,12 @@
   <section class="cta-section">
     <div class="container">
       <div class="cta-content" data-reveal>
-        <p class="eyebrow">By Appointment Only</p>
-        <h2>Not sure which <em>experience</em> to choose?</h2>
-        <p>Reach out and we'll help you find the perfect fit for what you're seeking. No pressure, just guidance.</p>
+        <p data-cms="services.t059" class="eyebrow">By Appointment Only</p>
+        <h2 data-cms="services.t060">Not sure which <em>experience</em> to choose?</h2>
+        <p data-cms="services.t061">Reach out and we'll help you find the perfect fit for what you're seeking. No pressure, just guidance.</p>
         <div class="cta-actions">
-          <a href="booking.html" class="btn btn-gold">Book Now</a>
-          <a href="contact.html" class="btn btn-outline">Ask a Question</a>
+          <a data-cms="services.t062" href="booking.html" class="btn btn-gold">Book Now</a>
+          <a data-cms="services.t063" href="contact.html" class="btn btn-outline">Ask a Question</a>
         </div>
       </div>
     </div>
@@ -1041,8 +953,8 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">Good <span>Girls</span></div>
-        <p class="footer-tag">Private. Intentional. Beautifully presented.</p>
-        <p class="footer-desc">Private sensual massage in West Auckland. Sensual, sophisticated, and discreet.</p>
+        <p data-cms="global.footer_tagline" class="footer-tag">Private. Intentional. Beautifully presented.</p>
+        <p data-cms="global.footer_description" class="footer-desc">Private sensual massage in West Auckland. Sensual, sophisticated, and discreet.</p>
       </div>
 
       <div class="footer-col">
@@ -1063,16 +975,16 @@
 
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="tel:+64211134233">021 113 4233</a>
-        <a href="mailto:thegoodgirlsnz@gmail.com">thegoodgirlsnz@gmail.com</a>
-        <span>West Auckland, NZ</span>
-        <span style="font-size: 0.8rem; margin-top: 8px; opacity: 0.7;">Address shared privately upon booking</span>
+        <a data-cms="global.phone" href="tel:+64211134233">021 113 4233</a>
+        <a data-cms="global.email" href="mailto:thegoodgirlsnz@gmail.com">thegoodgirlsnz@gmail.com</a>
+        <span data-cms="global.location">West Auckland, NZ</span>
+        <span data-cms="global.address_note" style="font-size: 0.8rem; margin-top: 8px; opacity: 0.7;">Address shared privately upon booking</span>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Good Girls. All rights reserved.</span>
-      <span>Private · Discreet · By Appointment</span>
+      <span data-cms="global.copyright">© 2026 Good Girls. All rights reserved.</span>
+      <span data-cms="global.footer_note">Private · Discreet · By Appointment</span>
     </div>
   </div>
 </footer>
@@ -1117,5 +1029,8 @@
       revealObserver.observe(el);
     });
   </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="js/loader.js"></script>
 </body>
 </html>

@@ -652,13 +652,13 @@
   <!-- ========== PAGE HERO ========== -->
   <section class="page-hero">
     <div class="hero-background">
-       <img src="images/bg2.png" alt="Good Girls Private Sensual Massage" />
+       <img data-cms-img="contact.img001" src="images/bg2.png" alt="Good Girls Private Sensual Massage" />
     </div>
     <div class="container">
       <div class="page-hero-content">
-        <p class="eyebrow">Get in Touch</p>
-        <h1>We'd love to <em>hear</em> from you</h1>
-        <p>Reach out for bookings, inquiries, or any questions about private sensual massage in West Auckland.</p>
+        <p data-cms="contact.t002" class="eyebrow">Get in Touch</p>
+        <h1 data-cms="contact.t003">We'd love to <em>hear</em> from you</h1>
+        <p data-cms="contact.t004">Reach out for bookings, inquiries, or any questions about private sensual massage in West Auckland.</p>
       </div>
     </div>
   </section>
@@ -667,8 +667,8 @@
   <section class="contact-form-section">
     <div class="container">
       <div class="form-wrapper">
-        <h2>We love to <em>care</em> for you</h2>
-        <p class="sub">Reach out and we'll reply soon.</p>
+        <h2 data-cms="contact.t005">We love to <em>care</em> for you</h2>
+        <p data-cms="contact.t006" class="sub">Reach out and we'll reply soon.</p>
 
         <!-- Formspree Contact Form -->
         <form id="contactForm" action="https://formspree.io/f/xwledlbo" method="POST">
@@ -700,19 +700,19 @@
       <div class="info-grid">
         <div class="info-card">
           <div class="info-card-icon">📞</div>
-          <h3>Phone</h3>
-          <p><a href="tel:+64211134233">021 113 4233</a></p>
+          <h3 data-cms="contact.t007">Phone</h3>
+          <p><a data-cms="global.phone" href="tel:+64211134233">021 113 4233</a></p>
         </div>
         <div class="info-card">
           <div class="info-card-icon">✉️</div>
-          <h3>Email</h3>
-          <p><a href="mailto:thegoodgirlsnz@gmail.com">thegoodgirlsnz@gmail.com</a></p>
+          <h3 data-cms="contact.t008">Email</h3>
+          <p><a data-cms="global.email" href="mailto:thegoodgirlsnz@gmail.com">thegoodgirlsnz@gmail.com</a></p>
         </div>
         <div class="info-card">
           <div class="info-card-icon">📍</div>
-          <h3>Location</h3>
-          <p>West Auckland, New Zealand</p>
-          <small>Address shared privately upon booking</small>
+          <h3 data-cms="contact.t009">Location</h3>
+          <p data-cms="contact.t010">West Auckland, New Zealand</p>
+          <small data-cms="contact.t011">Address shared privately upon booking</small>
         </div>
       </div>
     </div>
@@ -737,8 +737,8 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">Good <span>Girls</span></div>
-        <p class="footer-tag">Private. Intentional. Beautifully presented.</p>
-        <p class="footer-desc">Private sensual massage in West Auckland. Sensual, sophisticated, and discreet.</p>
+        <p data-cms="global.footer_tagline" class="footer-tag">Private. Intentional. Beautifully presented.</p>
+        <p data-cms="global.footer_description" class="footer-desc">Private sensual massage in West Auckland. Sensual, sophisticated, and discreet.</p>
       </div>
 
       <div class="footer-col">
@@ -759,16 +759,16 @@
 
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="tel:+64211134233">021 113 4233</a>
-        <a href="mailto:thegoodgirlsnz@gmail.com">thegoodgirlsnz@gmail.com</a>
-        <span>West Auckland, NZ</span>
-        <span style="font-size: 0.8rem; margin-top: 8px; opacity: 0.7;">Address shared privately upon booking</span>
+        <a data-cms="global.phone" href="tel:+64211134233">021 113 4233</a>
+        <a data-cms="global.email" href="mailto:thegoodgirlsnz@gmail.com">thegoodgirlsnz@gmail.com</a>
+        <span data-cms="global.location">West Auckland, NZ</span>
+        <span data-cms="global.address_note" style="font-size: 0.8rem; margin-top: 8px; opacity: 0.7;">Address shared privately upon booking</span>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Good Girls. All rights reserved.</span>
-      <span>Private · Discreet · By Appointment</span>
+      <span data-cms="global.copyright">© 2026 Good Girls. All rights reserved.</span>
+      <span data-cms="global.footer_note">Private · Discreet · By Appointment</span>
     </div>
   </div>
 </footer>
@@ -805,7 +805,7 @@
           setTimeout(function() {
             popup.classList.remove('active');
             document.body.style.overflow = '';
-          }, 5000);
+          }, 30000);
         } else {
           alert('Something went wrong. Please try again or contact us directly.');
         }
@@ -857,5 +857,8 @@
     });
   }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="js/loader.js"></script>
 </body>
 </html>
