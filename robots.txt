@@ -3,4 +3,12 @@ Disallow: /admin-login.html
 Disallow: /admin-dashboard.html
 Disallow: /admin-login
 Disallow: /admin-dashboard
+Disallow: /admin-workers.html
+Disallow: /admin-worker.html
+Disallow: /admin-workers
+Disallow: /admin-worker
+Disallow: /admin-editor.html
+Disallow: /admin-editor
+Disallow: /admin-availability.html
+Disallow: /admin-availability
 Sitemap: https://goodgirlsnz.com/sitemap.xml

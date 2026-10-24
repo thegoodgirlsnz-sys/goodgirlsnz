@@ -790,6 +790,7 @@
   }
 }
   </style>
+  <link rel="stylesheet" href="css/workers.css" />
 </head>
 <body>
 <!-- ========== HEADER ========== -->
@@ -847,30 +848,32 @@
         <p data-cms="meet.t006">At Good Girls, every experience is carefully curated by Missy — a therapist who brings warmth, presence, and a deep understanding of feminine energy to every session. Her approach is intuitive, unhurried, and beautifully considered.</p>
       </div>
 
-      <div class="girls-grid" data-reveal>
-        <!-- Single Girl - Missy -->
-        <div class="girl-card">
-          <div class="girl-image">
-            <img data-cms-img="meet.img007" src="images/Missy.jpg" alt="Missy - Founder & Lead Practitioner" />
-          </div>
-          <div class="girl-content">
-            <h3 data-cms="meet.t008" class="girl-name">Missy</h3>
-            <p data-cms="meet.t009" class="girl-title">FOUNDER · PRACTITIONER</p>
-            <p data-cms="meet.t010" class="girl-description">
-              With a background in dance, breathwork, Reiki and embodied practices, Missy brings a naturally intuitive and sensual approach to her work. Good Girls grew from her desire to create a private space where people can slow down, feel comfortable and experience sensual touch without judgement or pretence.
-            </p>
-            <p data-cms="meet.t011" class="girl-description" style="margin-top: -8px;">
-              Warm, playful and attentive, Missy's style is slow and sensual, with each experience shaped around presence, connection and making you feel completely at ease.
-            </p>
-            <div class="girl-tags">
-              <span data-cms="meet.t012" class="girl-tag">Signature</span>
-              <span data-cms="meet.t013" class="girl-tag">Training Doubles</span>
-              <span data-cms="meet.t014" class="girl-tag">Long Sessions</span>
-              <span data-cms="meet.t015" class="girl-tag">First-Timers Welcome</span>
+      <div class="girls-grid" id="workersGrid" data-reveal>
+        <!-- Built-in fallback. Replaced by live profiles from "Workers & Profiles" in the admin panel. -->
+        <article class="girl-profile" id="missy">
+          <div class="girl-card">
+            <div class="girl-image">
+              <img src="images/Missy.jpg" alt="Missy - Founder & Lead Practitioner" />
             </div>
-            <a href="booking.html" class="girl-link">Request Missy →</a>
+            <div class="girl-content">
+              <h3 class="girl-name">Missy</h3>
+              <p class="girl-title">FOUNDER · PRACTITIONER</p>
+              <p class="girl-description">
+                With a background in dance, breathwork, Reiki and embodied practices, Missy brings a naturally intuitive and sensual approach to her work. Good Girls grew from her desire to create a private space where people can slow down, feel comfortable and experience sensual touch without judgement or pretence.
+              </p>
+              <p class="girl-description">
+                Warm, playful and attentive, Missy's style is slow and sensual, with each experience shaped around presence, connection and making you feel completely at ease.
+              </p>
+              <div class="girl-tags">
+                <span class="girl-tag">Signature</span>
+                <span class="girl-tag">Training Doubles</span>
+                <span class="girl-tag">Long Sessions</span>
+                <span class="girl-tag">First-Timers Welcome</span>
+              </div>
+              <a href="booking.html" class="girl-link">Request Missy →</a>
+            </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -1010,5 +1013,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase-config.js"></script>
 <script src="js/loader.js"></script>
+<script src="js/workers.js"></script>
 </body>
 </html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worker Profile | Good Girls Admin</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <link rel="stylesheet" href="css/workers.css" />
+</head>
+<body>
+
+  <div class="admin-topbar">
+    <div class="admin-topbar-inner">
+      <a href="index.html" class="admin-brand"><img src="images/logo.jpg" alt="Good Girls" />Good <span>Girls</span></a>
+      <div class="admin-topbar-actions">
+        <a href="admin-workers.html" class="btn-outline">&larr; Workers</a>
+        <span class="admin-user" id="userEmail"></span>
+        <button class="btn-outline" id="logoutBtn" type="button">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="admin-main">
+    <a class="wk-page-back" href="admin-workers.html">&larr; Back to all workers</a>
+
+    <div class="admin-header">
+      <p class="eyebrow">Worker Profile</p>
+      <h1 id="pageTitle">Loading&hellip;</h1>
+      <p id="pageSub">Changes go live when you press Save.</p>
+    </div>
+
+    <div class="message" id="message"></div>
+    <div id="loadingState" class="loading-state">Loading&hellip;</div>
+
+    <div id="editor" hidden>
+
+      <!-- 1. DETAILS -->
+      <section class="wk-panel">
+        <h2>Details</h2>
+        <p class="wk-sub">The name, title and text shown on her profile.</p>
+        <div class="wk-form-grid">
+          <div class="wk-field">
+            <label for="f_name">Name *</label>
+            <input type="text" id="f_name" maxlength="80" autocomplete="off" />
+          </div>
+          <div class="wk-field">
+            <label for="f_slug">Web address</label>
+            <input type="text" id="f_slug" maxlength="60" autocomplete="off" spellcheck="false" />
+            <span class="wk-hint">Used for her page link. Letters, numbers and hyphens only. Leave blank to create it from the name.</span>
+          </div>
+          <div class="wk-field wk-full">
+            <label for="f_title">Title</label>
+            <input type="text" id="f_title" maxlength="80" autocomplete="off" />
+            <span class="wk-hint">Shown in small capitals under her name, for example: FOUNDER · PRACTITIONER</span>
+          </div>
+          <div class="wk-field wk-full">
+            <label for="f_about">About</label>
+            <textarea id="f_about" rows="7" maxlength="3000"></textarea>
+            <span class="wk-hint">Press Enter for a new line. Leave an empty line to start a new paragraph.</span>
+          </div>
+          <div class="wk-field wk-full">
+            <label for="f_tags">Tags</label>
+            <input type="text" id="f_tags" maxlength="300" autocomplete="off" />
+            <span class="wk-hint">Separate with commas, for example: Signature, Training Doubles, First-Timers Welcome</span>
+          </div>
+          <div class="wk-field wk-full">
+            <label class="wk-check" for="f_published">
+              <input type="checkbox" id="f_published" />
+              Show this worker on the website
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. LINKS -->
+      <section class="wk-panel">
+        <h2>Links</h2>
+        <p class="wk-sub">Optional buttons shown under her profile. Use a full web address (https://...) or a page on your site (for example booking.html).</p>
+        <div class="wk-form-grid">
+          <div class="wk-field">
+            <label for="f_btn_label">Button text</label>
+            <input type="text" id="f_btn_label" maxlength="40" autocomplete="off" placeholder="Request Missy →" />
+          </div>
+          <div class="wk-field">
+            <label for="f_btn_url">Button link</label>
+            <input type="text" id="f_btn_url" maxlength="300" autocomplete="off" spellcheck="false" inputmode="url" placeholder="booking.html" />
+          </div>
+          <div class="wk-field">
+            <label for="f_x_label">Second link text</label>
+            <input type="text" id="f_x_label" maxlength="40" autocomplete="off" placeholder="Instagram" />
+          </div>
+          <div class="wk-field">
+            <label for="f_x_url">Second link address</label>
+            <input type="text" id="f_x_url" maxlength="300" autocomplete="off" spellcheck="false" inputmode="url" placeholder="https://instagram.com/..." />
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. AVAILABILITY -->
+      <section class="wk-panel">
+        <h2>Availability</h2>
+        <p class="wk-sub">Set each day. Hours only show for days marked Available or Limited. Use the note for anything extra, for example &ldquo;Busy&rdquo;.</p>
+        <div class="wk-avail-head" aria-hidden="true">
+          <span>Day</span><span>Status</span><span>Hours</span><span>Note (optional)</span>
+        </div>
+        <div class="wk-avail-edit" id="availList"></div>
+      </section>
+
+      <!-- 4. PHOTOS & VIDEOS -->
+      <section class="wk-panel" id="mediaPanel">
+        <h2>Photos &amp; videos</h2>
+        <p class="wk-sub">These appear in a gallery on her profile. Visitors scroll them from left to right. The first item is shown first.</p>
+
+        <div id="mediaLocked" class="wk-empty-box" hidden>
+          Save the worker first. Then you can add her photos and videos here.
+        </div>
+
+        <div id="mediaTools" hidden>
+          <div class="wk-upload">
+            <button class="btn-outline" id="chooseBtn" type="button" style="border-color:rgba(201,168,76,.6)">+ Add photos or videos</button>
+            <input type="file" id="f_files" accept="image/*,video/mp4,video/quicktime,video/webm" multiple />
+            <span class="wk-hint" style="width:100%;margin:0">
+              You can choose several at once. Photos are made smaller automatically. Videos must be under 50&nbsp;MB (MP4 or MOV works best).
+            </span>
+            <div class="wk-upload-status" id="uploadStatus" role="status" aria-live="polite"></div>
+          </div>
+
+          <div class="wk-empty-box" id="mediaEmpty" hidden>
+            No photos or videos yet. Press <b>+ Add photos or videos</b> to start the gallery.
+          </div>
+          <div class="wk-media-grid" id="mediaGrid"></div>
+        </div>
+      </section>
+
+      <!-- SAVE BAR -->
+      <div class="wk-savebar">
+        <span class="wk-savebar-note" id="saveNote" aria-live="polite"></span>
+        <button type="button" class="btn" id="saveBtn">Save Worker</button>
+        <button type="button" class="btn btn-secondary" id="cancelBtn">Back to list</button>
+        <button type="button" class="wk-btn-small wk-btn-danger" id="deleteBtn" hidden>Delete worker</button>
+      </div>
+
+      <div class="dash-links" style="margin-top:24px">
+        <a href="meet-the-girls.html" target="_blank" rel="noopener">View Meet the Girls page &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="js/admin-worker.js"></script>
+</body>
+</html>
