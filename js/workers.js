@@ -256,7 +256,7 @@
     {
       id: 'demo-1', slug: 'missy', name: 'Missy', title: 'FOUNDER · PRACTITIONER',
       about: 'With a background in dance, breathwork, Reiki and embodied practices, Missy brings a naturally intuitive and sensual approach to her work.\n\nWarm, playful and attentive, her style is slow and sensual, shaped around presence and making you feel completely at ease.',
-      tags: 'Signature, Training Doubles, Long Sessions, First-Timers Welcome',
+      tags: 'Signature, Bi Doubles, Long Sessions, First-Timers Welcome',
       availability: [
         { day: 'Monday', status: 'available', hours: '10am – 4pm', note: '' },
         { day: 'Tuesday', status: 'available', hours: '12pm – 8pm', note: '' },

@@ -88,7 +88,7 @@
     if (desc && map['service.' + type + '.description']) desc.textContent = map['service.' + type + '.description'];
 
     if (sel) {
-      var names = { signature: 'The Signature Experience', training: 'Training Doubles' };
+      var names = { signature: 'The Signature Experience', training: 'Bi Doubles' };
       var message = document.getElementById('message');
       Array.prototype.forEach.call(sel.options, function (opt) {
         ['signature', 'training'].forEach(function (t) {
