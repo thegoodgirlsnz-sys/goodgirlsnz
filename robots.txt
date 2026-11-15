@@ -11,4 +11,8 @@ Disallow: /admin-editor.html
 Disallow: /admin-editor
 Disallow: /admin-availability.html
 Disallow: /admin-availability
+Disallow: /admin-blog.html
+Disallow: /admin-blog-editor.html
+Disallow: /admin-blog
+Disallow: /admin-blog-editor
 Sitemap: https://goodgirlsnz.com/sitemap.xml
